@@ -1,3 +1,46 @@
-Hola!
+# Version 2
+## Funktionalitet 
 
-Version 2
+## Sidor
+
+
+
+
+Kunna bläddra sidvis vid studenternas kommentarer vid (< > pilarna om möjligt)
+
+Kontakta knappen - kommer till kontakt sidan, där det kommer att vara mer information om hur det går att kontakta oss
+
+Destinations bilden och program bilden på första sidan kan man klicka på och då kommer man vidare till en av sidorna 
+
+footern - det ska vara snabblänkar till alla sidor samt kontakt sidorna
+
+
+
+## Funktioner 
+
+## Globala variabler
+
+## CSS
+
+##Base.CSS
+
+- Navigation.CSS
+Navigationen kommer att finnas på alla sidor. Navigationen kommer att betså av 4 rubriker som man kan klicka på. Klickar man på en av rubrikerna kommer  
+man in på den sidan man är intresserad av att gå in på. Rubrikerna är i en variant av ljusare grå färg, färgkod. 
+När man har klickat på en rubrik och hamnat på en utav sidorna, kommer den rubriken man klickade på att vara understruken av ett sträck i en turkos färg, färgkod. 
+Texten på den rubriken kommer då att bli tydligare i form av att texten blir tjockare och även mer åt det svarta hållet i färgen, färgkod.
+I navigationen kommer där även finnas en logga i form av ett jordklot som man kan klicka på för att komma till home-sidan. Loggan kommer också att finnas på alla
+sidor i navigationen.
+Färgerna är inte helt bestämda här och kan komma att ändras!
+
+
+-Footer.CSS
+Footern kommer att finnas på alla sidor. Footern består av loggan med jordklotet och ett antal snabblänkar för att kunna navigera sig snabbt och enkelt runt 
+om i appen / hemsidan. Footerns backgrundsfärg är just nu i färgen vit, färgkod. Footern har också ett svart sträck som går igenom 
+
+
+-Logga.CSS
+Loggan går också att klicka på och då kommer man till home page. Loggan har vi skapat och är ett jordklot i färgerna gul / organge
+och blå. Loggan har också en stor text över jordklotet där det står Jetlag i färgen turkos och en liten text under den där det står student i färgen vit. 
+Jetlag student kommer antagligen vara hemsidan/appens namn. 
+Färgerna här kan komma att ändras!
