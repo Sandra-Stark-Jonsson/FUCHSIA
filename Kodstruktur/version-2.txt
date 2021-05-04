@@ -22,25 +22,33 @@ footern - det ska vara snabblänkar till alla sidor samt kontakt sidorna
 
 ## CSS
 
-##Base.CSS
-
-- Navigation.CSS
+#Base.CSS
+- Navigation
 Navigationen kommer att finnas på alla sidor. Navigationen kommer att betså av 4 rubriker som man kan klicka på. Klickar man på en av rubrikerna kommer  
 man in på den sidan man är intresserad av att gå in på. Rubrikerna är i en variant av ljusare grå färg, färgkod. 
 När man har klickat på en rubrik och hamnat på en utav sidorna, kommer den rubriken man klickade på att vara understruken av ett sträck i en turkos färg, färgkod. 
 Texten på den rubriken kommer då att bli tydligare i form av att texten blir tjockare och även mer åt det svarta hållet i färgen, färgkod.
 I navigationen kommer där även finnas en logga i form av ett jordklot som man kan klicka på för att komma till home-sidan. Loggan kommer också att finnas på alla
 sidor i navigationen.
-Färgerna är inte helt bestämda här och kan komma att ändras!
 
 
--Footer.CSS
+- Footer
 Footern kommer att finnas på alla sidor. Footern består av loggan med jordklotet och ett antal snabblänkar för att kunna navigera sig snabbt och enkelt runt 
 om i appen / hemsidan. Footerns backgrundsfärg är just nu i färgen vit, färgkod. Footern har också ett svart sträck som går igenom 
 
-
--Logga.CSS
+- Logga
 Loggan går också att klicka på och då kommer man till home page. Loggan har vi skapat och är ett jordklot i färgerna gul / organge
 och blå. Loggan har också en stor text över jordklotet där det står Jetlag i färgen turkos och en liten text under den där det står student i färgen vit. 
 Jetlag student kommer antagligen vara hemsidan/appens namn. 
-Färgerna här kan komma att ändras!
+
+
+
+#home.css 
+- Home består av en navigationsbar högst upp på sidan. Navigationen finns placerad på en bild av vår logga som täcker hela skärmen. 
+Om man sedan scrollar ner på sidan kommer det att finnas kommentarer från tidigare studenter. Kommentarerna ska finnas i kvadratiska rutor som alla är lika stora
+och de ska ligga i en rad bredvid varandra. Det ska också vara lika mycket mellanrum mellan de. Vi har tänkt att rutorna ska ha en ljus backgrundsfärg och därför 
+har vi valt färgen vit, färgkod. Texten i rutorna ska vara i färgen svart, färgkod.
+
+Under studentrutorna kommer det att finnas en stor ruta(div). Den kommer att bestå en knapp, en bild och en välkommst-text.
+
+
