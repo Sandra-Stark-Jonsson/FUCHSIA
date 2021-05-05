@@ -1,71 +1,253 @@
 # Version 2
-## Funktionalitet 
 
-## Sidor
-
-
-
+##Funktionaliteter
+##Hem - första sidan 
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer
+ man till home page
 
 Kunna bläddra sidvis vid studenternas kommentarer vid (< > pilarna om möjligt)
 
-Kontakta knappen - kommer till kontakt sidan, där det kommer att vara mer information om hur det går att kontakta oss
+Kontakta knappen - kommer till kontakt sidan, där kommer det att vara mer information om hur det går att kontakta oss
 
 Destinations bilden och program bilden på första sidan kan man klicka på och då kommer man vidare till en av sidorna 
 
-footern - det ska vara snabblänkar till alla sidor samt kontakt sidorna
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+
+##Andra sidan - destinations sidan 
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer
+ man till home page
+
+Man kan snabbsöka på land eller stad och därefter kommer det att dyka upp information om landet/staden. Klickar du därefter på läs mer dyker det ännu mer 
+information. Diven blir större och bilder samt text dyker upp, sedan finns det en stäng knapp. Klickar man på stäng knappen så försvinner diven med extra 
+information och det återgår till en normal div där stadens namn och liten text syns samt läs mer knappen. 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+
+##Tredje sidan - programsidan 
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer
+man till home page
+
+Man kan skriva in ett program och då dyker en div upp med blandad information. 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+##Fjärde sidan - kontaktsidan  
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer 
+man till home page
+
+Den funktionaliteten du kan göra på kontaktsidan är att du kan klicka dig på kartan och då kommer du till google maps. 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+
+##Sidor
+HTML
+Hem - index.html
+Destinationer - destinations.html
+Program - programs.html
+Kontakta oss - contact.html
+
+CSS
+home.css
+destinations.css
+programs.css
+contact.css
+base.css
+
+Javascript
+home.js
+destinations.js
+programs.js
+contact.js
+database.js
+
+Hem- index.html
+home.css
+base.css
+home.js
+
+Destinationer-destinations.html
+destinations.css
+base.css
+destinations.js
+database.js
+
+Program- programs.html
+programs.css
+base.css
+programs.js
+database.js
+
+Kontakta oss - contact.html
+contact.css
+base.css
+contact.js
+
+
+#Funktioner
+
+-getCountry(country):: city[] 
+getCountry är en funktion som tar emot en parameter (country) - landet man söker på och returnerar en array som innehåller alla städer i det landet 
+Deklareras i destinations.js
+
+getCity(city) :: city(objekt)?
+getCity tar emot en parameter (city) och returnerar ett objekt som innehåller nycklar
+deklareras i destinations.js
+
+getProgram(program) :: program []
+getProgram tar emot en parameter (program) och returnerar ett objekt som innehåller nycklar 
+deklareras i programs.js
+
+readMoreButton(readMore) :: append(‘div’)
+readMoreButton är en knapp, addEventListener(‘click’, function){} visas en div med mer text/full text
+deklareras i destinations.js
+deklareras i programs.js
+
+closeDiv(closebutton) :: remove(‘div)
+closeDiv är en knapp, addEventListener(‘click’, function){} stänger/tar bort en div.
+deklareras i destinations.js
+deklareras i programs.js
+
+fastSearchCountry(country) :: country[]
+fastSearch finns på varje land i destinationer överst på bilden. Dessa länder kan man klicka på och addEventListener(‘click’, function){} och då triggas en 
+funktion. Funktionen returnerar sedan det landet som klickades på och appendar det under bilden
+deklareras i destinations.js
+
+
+fastSearchCity(country) :: city[]
+fastSearch finns på varje stad i destinationer överst på bilden. Dessa städer kan man klicka på och addEventListener(‘click’, function){} och då triggas en 
+funktion. Funktionen returnerar sedan den staden som klickades på och appendar det under bilden.
+deklareras i destinations.js
+
+
+//Funktion för att bläddra mellan recensioner av studenter//
+let flip = new Flip('.carousel');
+let progressBar = document.querySelector('.student-bar');
+flip.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
+});
+deklareras i destinations.js
+deklareras i programs.js
+deklareras i index.js
 
 
 
-## Funktioner 
+#Globala Variabler
+navigationen?
+footern?
+Läs mer knappen(readMore)
+Stäng knappen(closeButton)
+const readMore = document.getElementById('readmore');
+const closeButton  = document.getElementById('closebutton');
+const footer = document.getElementById(“footer”);
+const nav = document.getElementById(“nav”);
 
-## Globala variabler
+(fråga Sebastian om globala variabler)
+
+
 
 ## CSS
+#home.css 
+- Home består av en bild av vår logga som täcker hela skärmen. Om man sedan scrollar vidare ner på sidan kommer det att finnas kommentarer från tidigare studenter.
+Kommentarerna ska finnas i kvadratiska rutor som alla är lika stora och de ska ligga i en rad bredvid varandra. Det ska också vara lika mycket mellanrum mellan 
+de. Tanken är att rutorna ska ha en ljus backgrundsfärg och därför har vi valt färgen vit. Texten i rutorna ska vara i färgen svart, färgkod. Det ska
+också finnas sjärnor med i rutorna i färgen svart. Stjärnorna ska föreställa betyg som tidigare studenter har gett till ett program, stad, land osv. Man ska också 
+kunna bläddra sidvis mellan kommentarerna med hjälp av pilar som man ska trycka på (< >). En pil kommer va till vänster och en till höger om rutorna. De kommer
+att vara i svart färg.
+
+Under studentrutorna kommer det att finnas en stor ruta(div). Den kommer att bestå en knapp, en bild och text. I rutan/diven kommer texten att vara
+placerad på vänstra sidan med en rubrik längst upp. Rubriken kommer vara i fet stil och i svart färg. Under rudbriken kommer brödtexten som också är i 
+svart färg men med stilen regular eller medium. 
+Under texten kommer det finnas en knapp med svart bakgrundsfärg. På knappen ska det stå "Kontakta oss" i färgen vit. Trycker man på denna knappen
+kommer man till kontakt sidan. 
+Till höger om texten och knappen kommer det att finnas en bild. Det kommer finnas ett mellanrum mellan bilden och texten. Det kommer finnas marginal
+uppe och nere på bilden och detsamma gällande texten, vilet ger oss en kant. Bakgrundsfärgen i rutan ser är en grön färg. 
+
+Scrollar man längre ner på sidan kommer det att finnas en till div och en rubriktext i svart färg där det står "Vad vill du veta mer om"? Under rubriken kommer det
+att synas två bilder som är centrerade på sidan med ett mellan rum emellan varandra. Bilderna är avlånga på höjden och har var sin knapp längre ner på bilderna. 
+Knapparna har en svart border och en vit transparent bakgrundsfärg. På kanppen till vänster står det "Destinationer" och på den högra knappen 
+står det "program". Texten står i svart färg. Trycker man på någon av knapparna kommer man till respektive sida. 
+
+Hela home sidan kommer han en ljus och nästan vit bakgrundsfärg,(färg: F2F2F2).
+
+
+#Destinationer
+- Destinationer består av en bild som täcker hela skärmen. På bilden finns det en stor rubrik i fetstil med svart transparent färg: “DESTINATIONER”. 
+Under rubriken kommer det finnas en grid med länder utplacerade. Länderna ska ha samma färg som rubriken.
+
+I den nedre delen av bilden ska det finnas en text: “Vart vill du åka?”. Texten står i vit färg. Under texten hittar man två sökfält. Sökfälten har 
+en vit, transparent bakgrundsfärg och en svart text. Det finns även en svart border. Det finns också ett stort mellanrum mellan sökfälten och 
+en viss marginal ner till botten sidan av bilden. I det vänstra fältet står det “Sök Land” och i det högra “Sök Stad”. 
+
+Använder man sökfälten kommer man kunna scrolla längre ner på sidan. Där dyker det upp rutor/divar i gröna och blå färger. Rutorna täcker hela sidan vågrätt 
+och innehåller information om staden man sökt på.
+
+I rutorna kommer det precis som på home sidan finnas text och en knapp på ena sidan och en bild på på den andra sidan. Texten kommer bestå av en rubrik i svart 
+fet stil och en liten svart brödtext i regular / medium stil. I knappen kommer det stå “Läs mer...” i färgen vit och bakgrundsfärgen på knappen ska vara svart. 
+Trycker man på knappen kommer rutan förlängas / rulla ner. Knappen kommer också få bakgrundsfärgen vit och texten svart. 
+
+När den har rullat ut kommer man se en rektangelformad ruta som sträcker sig vågrätt över hela sidan. Rutan innehåller statistik och har en vit transparent färg. 
+Scrollar man längre ner kommer man till en bild och en ruta med text som finns bredvid varandra. Både bilden och rutan når hela vägen ut i sidorna på hemsidan 
+men har ett litet mellanrum mellan varandra. 
+
+Scrollar man längre ner kommer man se student kommentarer som har exakt samma utseende och funktion som på home. 
+Alltså rutor med vit bakgrundsfärg och svart text. Det är lika mycket mellanrum mellan rutorna och det går att bläddra mellan dem med hjälp av svarta pilar på 
+vänster och höger sida om rutorna. Den enda skillnaden är att vi inte har stjärnor med i rutorna.
+
+Efter rutorna och i slutet av den utvecklade rutan kommer det att finnas en knapp: Stäng. Knappen kommer att ha svart bakgrundsfärg och vit text. Trycker man 
+på knappen kommer knappens bakgrundsfärg bli vit och texten svart. Sedan kommer rutan rulla ihop igen. Den kommer alltså se ut som den gjorde i början och allt 
+innehåll inklusive stäng knappen försvinner från den utvecklade rutan. 
+
+Hela destinaton sidan kommer han en ljus och nästan vit bakgrundsfärg,(färg: F2F2F2).
+
+
+#Program
+- Programsidan består av en bild som täcker hela skärmen. På bilden finns det en stor rubrik i fetstil med svart transparent färg: “PROGRAM”. 
+Sedan finns det ytterligare en rubrik längre ner på bilden: “Vad vill du plugga?”. Texten står i vit färg. Under denna rubrik hittar man ett sökfält. 
+Sökfältet har en vit bakgrund och en svart text. Det finns även en svart border. I sökfältet står det “Sök på program”.
+
+Använder man sökfältet kommer man kunna scrolla längre ner på sidan. Där dyker det upp rutor/divar i gröna och blå färger. Rutorna täcker hela sidan vågrätt 
+och innehåller information om programmet man sökt på. I denna ruta finns det en huvudrubrik i svart och fetstil. Med en rubrik bredvid i en mindre storlek och 
+light stil. Under rubriken kommer det text, sedan en tabell med svart text och under det student kommentarer som man kan bläddra mellan. Allt detta finns 
+på höger sida av rutan. På andra sidan finns också en statistisk tabell i vit transparent färg. 
+
+Hela program sidan kommer han en ljus och nästan vit bakgrundsfärg,(färg: F2F2F2).
+
+#Kontakt 
+- Kontaktsidan har en stor bild som täcker hela skärmen. På bilden finns det en stor rubrik  i fetstil med svart transparent färg: KONTAKT.
+
+Scrollar man ner på sidan hittar man en ruta/div i en grön bakgrundsfärg. Rutan täcker hela sidan vågrätt. Rutan har text på vänstra sidan och en bild på 
+en karta på andra sidan med mellanrum emellan. Det är också marginal runt om så att det blir en kant i rutan. 
+
+Hela kontakt sidan kommer han en ljus och nästan vit bakgrundsfärg,(färg: F2F2F2).
+
 
 #Base.CSS
 - Navigation
 Navigationen kommer att finnas på alla sidor längst upp på sidan. Navigationen kommer att betså av 4 rubriker som man kan klicka på. Klickar man på en av
-rubrikerna kommer man in på den sidan man är intresserad av att gå in på. Rubrikerna är i en variant av ljusare grå färg, färgkod. 
-När man har klickat på en rubrik och hamnat på en utav sidorna, kommer den rubriken man klickade på att vara understruken av ett sträck i en turkos färg, färgkod. 
-Texten på den rubriken kommer då att bli tydligare i form av att texten blir tjockare och även mer åt det svarta hållet i färgen, färgkod.
+rubrikerna kommer man in på den sidan man är intresserad av att gå in på. Rubrikerna är i en transparent vit färg. HEM kategorin / rubriken på första sidan kommer
+vara i 100% vit färg eftersom att bakgrundsbilden är så mörk att det blir svårt att se texten annars. 
+När man har klickat på en rubrik och hamnat på en utav sidorna, kommer den rubriken man klickade på att vara understruken av ett sträck i en turkos färg. 
 I navigationen kommer där även finnas en logga i form av ett jordklot som man kan klicka på för att komma till home-sidan. Loggan kommer också att finnas på alla
 sidor i navigationen.
 
 - Footer
-Footern kommer att finnas på alla sidor. Footern består av loggan med jordklotet och ett antal snabblänkar för att kunna navigera sig snabbt och enkelt runt 
-om i appen / hemsidan. Footerns backgrundsfärg är just nu i färgen vit, färgkod. Footern har också ett svart sträck som går igenom 
+Footern kommer att finnas på alla sidor. Footern består av vår logga och ett antal snabblänkar för att kunna navigera sig snabbt och enkelt runt 
+om i appen / hemsidan. Footerns backgrundsfärg är i färgen vit. 
 
 - Logga
-Loggan går också att klicka på och då kommer man till home page. Loggan har vi skapat och är ett jordklot i färgerna gul / organge
-och blå. Loggan har också en stor text över jordklotet där det står Jetlag i färgen turkos och en liten text under den där det står student i färgen vit. 
-Jetlag student kommer antagligen vara hemsidan/appens namn. 
+Loggan går att klicka på och då kommer man till home page. Loggan har vi skapat och är ett jordklot i färgerna gul / organge
+och blå. Loggan har också en stor text över jordklotet där det står Jetlag i färgen turkos och en liten text under den där det står student i färgen 
+vit. 
+Jetlag student kommer vara hemsidan/appens namn. 
 
 
-
-#home.css 
-- Home består av en navigationsbar högst upp på sidan. Navigationen finns placerad på en bild av vår logga som täcker hela skärmen. 
-Om man sedan scrollar ner på sidan kommer det att finnas kommentarer från tidigare studenter. Kommentarerna ska finnas i kvadratiska rutor som alla är lika stora
-och de ska ligga i en rad bredvid varandra. Det ska också vara lika mycket mellanrum mellan de. Tanken är att rutorna ska ha en ljus backgrundsfärg och därför 
-har vi valt färgen vit, färgkod. Texten i rutorna ska vara i färgen svart, färgkod. Man ska också kunna bläddra sidvis mellan kommentarerna vid studenternas 
-med hjälp av pilar som man ska trycka på (< >). En pil kommer va till vänster och en till höger om rutorna.
-
-Hela home sidan kommer han en ljus och vit bakgrundsfärg, färgkod.
-Under studentrutorna kommer det att finnas en stor ruta(div). Den kommer att bestå en knapp, en bild och text. I rutan/diven kommer texten att vara
-placerad på vänstra sidan med en rubrik längst upp. Rubriken kommer vara i fet stil och i svart färg, färgkod. Under rudbriken kommer brödtexten som också är i 
-svart färg, färgkod. Stilen på brödtexten kommer vara regular eller medium. 
-Under texten kommer det finnas en knapp med svart bakgrundsfärg, färgkod. På knappen ska det stå "Kontakta oss" i vit färg, färgkod. Trycker man på denna knappen
-kommer man till kontakt sidan. 
-Till höger om texten och knappen kommer det att finnas en bild. Det kommer finnas ett mellanrum mellan bilden och texten. Marginalen uppe och nere på bilden och 
-detsamma gällande texten, vilet ger oss en kant. Bakgrundsfärgen i rutan ser är en grön färg, färgkod. 
-
-Scrollar man längre ner på sidan kommer det att finnas en till div och en rubriktext i svart färg där det står "Vad vill du veta mer om"? Under rubriken kommer det
-att synas två bilder som är centrerade på sidan med ett mellan rum emellan de. Bilderna är avlånga på höjden och har var sin knapp längre ner på bilderna. 
-Knapparna har en svart border på 1/2 px och en vit transparent bakgrundsfärg, färgkod. På kanppen till vänster står det "Destinationer" och på den högra knappen 
-står det "program". Texten står i svart färg, färgkod. Trycker man på någon av knapparna kommer man till respektive sida. 
-
-Längst ner på sidan har vi footern.
-
-
-
-#Destinationer
-- Destinationer 
+Alla sidor kommer att ha en bakgrundsfärg: F2F2F2
+Divarna med bild och text + program divarna ska ha färgen: B2BCAB eller 97A8A7
+Student divarna ska ha färgen: FFFFFF
+Alla knappar ska ha färgen: FFFFF eller 000000
+All text ska ha färgen: FFFFFF eller 000000
+Den navigations rubriken man trycker på får en turkos färg: A3D2C2
