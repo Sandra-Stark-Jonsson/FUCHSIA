@@ -1,3 +1,71 @@
-Hola!
+# Version 2
+## Funktionalitet 
 
-Version 2
+## Sidor
+
+
+
+
+Kunna bläddra sidvis vid studenternas kommentarer vid (< > pilarna om möjligt)
+
+Kontakta knappen - kommer till kontakt sidan, där det kommer att vara mer information om hur det går att kontakta oss
+
+Destinations bilden och program bilden på första sidan kan man klicka på och då kommer man vidare till en av sidorna 
+
+footern - det ska vara snabblänkar till alla sidor samt kontakt sidorna
+
+
+
+## Funktioner 
+
+## Globala variabler
+
+## CSS
+
+#Base.CSS
+- Navigation
+Navigationen kommer att finnas på alla sidor längst upp på sidan. Navigationen kommer att betså av 4 rubriker som man kan klicka på. Klickar man på en av
+rubrikerna kommer man in på den sidan man är intresserad av att gå in på. Rubrikerna är i en variant av ljusare grå färg, färgkod. 
+När man har klickat på en rubrik och hamnat på en utav sidorna, kommer den rubriken man klickade på att vara understruken av ett sträck i en turkos färg, färgkod. 
+Texten på den rubriken kommer då att bli tydligare i form av att texten blir tjockare och även mer åt det svarta hållet i färgen, färgkod.
+I navigationen kommer där även finnas en logga i form av ett jordklot som man kan klicka på för att komma till home-sidan. Loggan kommer också att finnas på alla
+sidor i navigationen.
+
+- Footer
+Footern kommer att finnas på alla sidor. Footern består av loggan med jordklotet och ett antal snabblänkar för att kunna navigera sig snabbt och enkelt runt 
+om i appen / hemsidan. Footerns backgrundsfärg är just nu i färgen vit, färgkod. Footern har också ett svart sträck som går igenom 
+
+- Logga
+Loggan går också att klicka på och då kommer man till home page. Loggan har vi skapat och är ett jordklot i färgerna gul / organge
+och blå. Loggan har också en stor text över jordklotet där det står Jetlag i färgen turkos och en liten text under den där det står student i färgen vit. 
+Jetlag student kommer antagligen vara hemsidan/appens namn. 
+
+
+
+#home.css 
+- Home består av en navigationsbar högst upp på sidan. Navigationen finns placerad på en bild av vår logga som täcker hela skärmen. 
+Om man sedan scrollar ner på sidan kommer det att finnas kommentarer från tidigare studenter. Kommentarerna ska finnas i kvadratiska rutor som alla är lika stora
+och de ska ligga i en rad bredvid varandra. Det ska också vara lika mycket mellanrum mellan de. Tanken är att rutorna ska ha en ljus backgrundsfärg och därför 
+har vi valt färgen vit, färgkod. Texten i rutorna ska vara i färgen svart, färgkod. Man ska också kunna bläddra sidvis mellan kommentarerna vid studenternas 
+med hjälp av pilar som man ska trycka på (< >). En pil kommer va till vänster och en till höger om rutorna.
+
+Hela home sidan kommer han en ljus och vit bakgrundsfärg, färgkod.
+Under studentrutorna kommer det att finnas en stor ruta(div). Den kommer att bestå en knapp, en bild och text. I rutan/diven kommer texten att vara
+placerad på vänstra sidan med en rubrik längst upp. Rubriken kommer vara i fet stil och i svart färg, färgkod. Under rudbriken kommer brödtexten som också är i 
+svart färg, färgkod. Stilen på brödtexten kommer vara regular eller medium. 
+Under texten kommer det finnas en knapp med svart bakgrundsfärg, färgkod. På knappen ska det stå "Kontakta oss" i vit färg, färgkod. Trycker man på denna knappen
+kommer man till kontakt sidan. 
+Till höger om texten och knappen kommer det att finnas en bild. Det kommer finnas ett mellanrum mellan bilden och texten. Marginalen uppe och nere på bilden och 
+detsamma gällande texten, vilet ger oss en kant. Bakgrundsfärgen i rutan ser är en grön färg, färgkod. 
+
+Scrollar man längre ner på sidan kommer det att finnas en till div och en rubriktext i svart färg där det står "Vad vill du veta mer om"? Under rubriken kommer det
+att synas två bilder som är centrerade på sidan med ett mellan rum emellan de. Bilderna är avlånga på höjden och har var sin knapp längre ner på bilderna. 
+Knapparna har en svart border på 1/2 px och en vit transparent bakgrundsfärg, färgkod. På kanppen till vänster står det "Destinationer" och på den högra knappen 
+står det "program". Texten står i svart färg, färgkod. Trycker man på någon av knapparna kommer man till respektive sida. 
+
+Längst ner på sidan har vi footern.
+
+
+
+#Destinationer
+- Destinationer 
