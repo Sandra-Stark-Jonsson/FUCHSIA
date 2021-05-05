@@ -122,6 +122,7 @@ flip.on( 'scroll', function( progress ) {
 });
 deklareras i destinations.js
 deklareras i programs.js
+deklareras i index.js
 
 
 
