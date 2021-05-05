@@ -77,3 +77,69 @@ Kontakta oss - contact.html
 contact.css
 base.css
 contact.js
+
+
+#Funktioner
+
+-getCountry(country):: city[] 
+getCountry är en funktion som tar emot en parameter (country) - landet man söker på och returnerar en array som innehåller alla städer i det landet 
+Deklareras i destinations.js
+
+getCity(city) :: city(objekt)?
+getCity tar emot en parameter (city) och returnerar ett objekt som innehåller nycklar
+deklareras i destinations.js
+
+getProgram(program) :: program []
+getProgram tar emot en parameter (program) och returnerar ett objekt som innehåller nycklar 
+deklareras i programs.js
+
+readMoreButton(readMore) :: append(‘div’)
+readMoreButton är en knapp, addEventListener(‘click’, function){} visas en div med mer text/full text
+deklareras i destinations.js
+deklareras i programs.js
+
+closeDiv(closebutton) :: remove(‘div)
+closeDiv är en knapp, addEventListener(‘click’, function){} stänger/tar bort en div.
+deklareras i destinations.js
+deklareras i programs.js
+
+fastSearchCountry(country) :: country[]
+fastSearch finns på varje land i destinationer överst på bilden. Dessa länder kan man klicka på och addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan det landet som klickades på och appendar det under bilden
+deklareras i destinations.js
+
+
+fastSearchCity(country) :: city[]
+fastSearch finns på varje stad i destinationer överst på bilden. Dessa städer kan man klicka på och addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan den staden som klickades på och appendar det under bilden.
+deklareras i destinations.js
+
+
+//Funktion för att bläddra mellan recensioner av studenter//
+let flip = new Flip('.carousel');
+let progressBar = document.querySelector('.student-bar');
+flip.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
+});
+deklareras i destinations.js
+deklareras i programs.js
+
+
+
+#Globala Variabler
+navigationen?
+footern?
+Läs mer knappen(readMore)
+Stäng knappen(closeButton)
+const readMore = document.getElementById('readmore');
+const closeButton  = document.getElementById('closebutton');
+const footer = document.getElementById(“footer”);
+const nav = document.getElementById(“nav”);
+
+(fråga Sebastian om globala variabler)
+
+#CSS
+home.css - ingen css 
+destinations.css - ingen css
+programs.css - ingen css
+contact.css - ingen css
+base.css - ingen css 
