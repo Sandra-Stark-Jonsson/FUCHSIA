@@ -1,27 +1,35 @@
 Version 3
 #FUNKTIONALITETER
 Hem - första sidan 
-På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad 
+av att gå in på. Loggan går också att klicka på och då kommer man till home page
 
 Kunna bläddra sidvis vid studenternas kommentarer vid (< > pilarna om möjligt)
 
-Kontakta knappen - kommer till kontakt sidan, där det kommer att vara mer information om hur det går att kontakta oss
+Kontakta knappen - kommer till kontakt sidan, där det kommer att vara mer information om hur det går 
+att kontakta oss
 
-Destinations bilden och program bilden på första sidan kan man klicka på och då kommer man vidare till en av sidorna 
+Destinations bilden och program bilden på första sidan kan man klicka på och då kommer man vidare till 
+en av sidorna 
 
 Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
 
 
 Andra sidan - destinations sidan 
-På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av 
+att gå in på. Loggan går också att klicka på och då kommer man till home page
 
-Man kan snabbsöka på land eller stad och därefter kommer det att dyka upp information om landet/staden. Klickar du därefter på läs mer dyker det ännu mer information. Diven blir större och bilder samt text dyker upp, sedan finns det en stäng knapp. Klickar man på stäng så försvinner diven med extra information och det återgår till en normal div där stadens namn och liten text finns. 
+Man kan snabbsöka på land eller stad och därefter kommer det att dyka upp information om landet/staden. 
+Klickar du därefter på läs mer dyker det ännu mer information. Diven blir större och bilder samt text 
+dyker upp, sedan finns det en stäng knapp. Klickar man på stäng så försvinner diven med extra information 
+och det återgår till en normal div där stadens namn och liten text finns. 
 
 Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
 
 
 Tredje sidan - programsidan 
-På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad 
+av att gå in på. Loggan går också att klicka på och då kommer man till home page
 
 Man kan skriva in ett program och då dyker en div upp med blandad information. 
 
@@ -29,9 +37,11 @@ Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt s
 
 
 Fjärde sidan - kontaktsidan  
-På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad 
+av att gå in på. Loggan går också att klicka på och då kommer man till home page
 
-Den funktionaliteten du kan göra på kontaktsidan är att du kan klicka dig på kartan och då kommer du till google maps. 
+Den funktionaliteten du kan göra på kontaktsidan är att du kan klicka dig på kartan och då kommer du 
+till google maps. 
 
 Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
 
@@ -79,7 +89,8 @@ contact.js
 
 #Funktioner
 -getCountry(country):: city[] 
-getCountry är en funktion som tar emot en parameter (country) - landet man söker på och returnerar en array som innehåller alla städer i det landet 
+getCountry är en funktion som tar emot en parameter (country) - landet man söker på och returnerar en 
+array som innehåller alla städer i det landet 
 Deklareras i destinations.js
 
 getCity(city) :: city(objekt)?
@@ -101,11 +112,15 @@ deklareras i destinations.js
 deklareras i programs.js
 
 fastSearchCountry(country) :: country[]
-fastSearch finns på varje land i destinationer överst på bilden. Dessa länder kan man klicka på och addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan det landet som klickades på och appendar det under bilden
+fastSearch finns på varje land i destinationer överst på bilden. Dessa länder kan man klicka på och 
+addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan det landet 
+som klickades på och appendar det under bilden
 deklareras i destinations.js
 
 fastSearchCity(country) :: city[]
-fastSearch finns på varje stad i destinationer överst på bilden. Dessa städer kan man klicka på och addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan den staden som klickades på och appendar det under bilden.
+fastSearch finns på varje stad i destinationer överst på bilden. Dessa städer kan man klicka på och 
+addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan den staden 
+som klickades på och appendar det under bilden.
 deklareras i destinations.js
 
 
@@ -136,18 +151,74 @@ const nav = document.getElementById(“nav”);
 
 
 #CSS
-home.css - home sidan ska ha en bild med vår logga som täcker hela skärmen.Scrollar man ner på sidan kommer rutor med kommentarer från tidigare studenter finnas. Alla rutor ska vara lika stora, de ska ligga i en rad och ha lika mycket mellanrum till varandra. Rutorna ska vara vita och texten svart.
-Under student rutorna kommer en div som innehåller text, en knapp och en bild. Diven ska ha en grön bakgrund: B2BCAB. Bilden placeras till höger med lika mycket marginal upp som ner. Texten placeras till vänster på samma sätt som bilden. Knappen ligger under texten med lika mycket marginal från kanten nedtill som texten har upptill. Knappen är placerad i linje med texten på vänsterkanten.
-Under de kommer det en ny div med en rubrik: Vad vill du veta mer om? Under det kommer två avlånga divar med en en knapp längst ner. Divarna kommer ha en bakgrundsbild och knapparna ska vara transparenta  med vit färg och svart text. 
+home.css - home sidan ska ha en bild med vår logga som täcker hela skärmen.Scrollar man ner på sidan 
+kommer rutor med kommentarer från tidigare studenter finnas. Alla rutor ska vara lika stora, de ska 
+ligga i en rad och ha lika mycket mellanrum till varandra. Rutorna ska vara vita och texten svart.
+Under student rutorna kommer en div som innehåller text, en knapp och en bild. Diven ska ha en grön 
+bakgrund: B2BCAB. Bilden placeras till höger med lika mycket marginal upp som ner. Texten placeras till 
+vänster på samma sätt som bilden. Knappen ligger under texten med lika mycket marginal från kanten nedtill 
+som texten har upptill. Knappen är placerad i linje med texten på vänsterkanten.
+Under de kommer det en ny div med en rubrik: Vad vill du veta mer om? Under det kommer två avlånga divar 
+med en en knapp längst ner. Divarna kommer ha en bakgrundsbild och knapparna ska vara transparenta  med 
+vit färg och svart text. 
 
-destinations.css - destinationer sidan ska ha en bild med som täcker hela skärmen. På denna bild ska det stå en rubrik: DESTINATIONER i svart transparant färg. Under rubriken ska det ligga en grid med länderna. Länderna ska ha samma färg som rubriken. Dessa länder ska vara klickbara så när man hovrar över ett land ska den bli helsvart för att visa att det går att klicka. När man klickat ska de landet behålla den svarta färgen. I den nedre delen av bilden ska det finnas en text: Vart vill du åka? med två sökrutor under. De ska vara vita och något transparenta med svart text: Sök Land på den högra och Sök Stad på den vänstra. De ska ha en marginal från den nedre kanten av bilden lika mycket mellanrum som marginal till kanterna på bilden. Under detta ska städerna komma upp i divar. Divarna ska vara lika breda som skärmen och innehålla en bild på höger sida med lika mycker marginal upp som ner. På vänster sida ska staden stå som en rubrik men en kort beskrivning under. Under texten ska det finnas en knapp med “Läs mer” på. Knappen ska vara svart med vit text. När man trycker på knappen ska diven bli större där mer information om staden dyket upp. Knappen kommer även få en display: none;. Under texten och knappen kommer det finnas en grid som innehåller snittbetyg av UTELIV MAT och BOENDE. Dessa tre kategorier kommer att stå på en rad med siffrorna kopplat till varje kategori under. Fonten här ska vara lite större för att dra åt sig uppmärksamhet och i svart färg. Griden kommer ha samma bredd som texten ovanför. Under gridden ska det vara en bild som, den ska ha samma storlek som bilden ovanför i samma div. På den högra sidan ska det finnas en textruta som är lika lång som griden och bilden tillsammans och lika bred som textrutan ovanför. Här i ska universiteten som finns radas upp. Namnet på universitetet ska vara en rubrik. Under skolan ska program som erbjuds radas upp med vilken nivå de är på och bredvid programmet och under med en lite mindre text vilket språk som kommer användas. Är det fler universitet i staden än vad som får plats i rutan ska det finnas en scroll. Under bilden och textrutan ska det finnas kommentarer från tidigare studenter i en div. Överst ska det stå en rubrik “Tidigare Studenter” och under denna ska kommentarerna stå in nya divar med med vit bakgrundsfärg och svart text. Divarna ska ligga på en rad med lika långt avstånd till varandra. På höger och vänster sida ska det finnas pilas som ska gå att trycka på för att bläddra bland kommentarerna. Under studenterna ska det finnas en knapp som stänger det som dök upp när man tryckte på “Läs Mer” knappen och får tillbaka ursprungs diven. knappen ska se likadan ut som dom de andra svart med vit text.
+destinations.css - destinationer sidan ska ha en bild med som täcker hela skärmen. På denna bild ska det 
+stå en rubrik: DESTINATIONER i svart transparant färg. Under rubriken ska det ligga en grid med länderna. 
+Länderna ska ha samma färg som rubriken. Dessa länder ska vara klickbara så när man hovrar över ett land 
+ska den bli helsvart för att visa att det går att klicka. När man klickat ska de landet behålla den svarta 
+färgen. I den nedre delen av bilden ska det finnas en text: Vart vill du åka? med två sökrutor under. 
+De ska vara vita och något transparenta med svart text: Sök Land på den högra och Sök Stad på den vänstra. 
+De ska ha en marginal från den nedre kanten av bilden lika mycket mellanrum som marginal till kanterna 
+på bilden. Under detta ska städerna komma upp i divar. Divarna ska vara lika breda som skärmen och 
+innehålla en bild på höger sida med lika mycker marginal upp som ner. På vänster sida ska staden stå 
+som en rubrik men en kort beskrivning under. Under texten ska det finnas en knapp med “Läs mer” på. 
+Knappen ska vara svart med vit text. När man trycker på knappen ska diven bli större där mer information 
+om staden dyket upp. Knappen kommer även få en display: none;. Under texten och knappen kommer det finnas 
+en grid som innehåller snittbetyg av UTELIV MAT och BOENDE. Dessa tre kategorier kommer att stå på en rad 
+med siffrorna kopplat till varje kategori under. Fonten här ska vara lite större för att dra åt sig 
+uppmärksamhet och i svart färg. Griden kommer ha samma bredd som texten ovanför. Under gridden ska det 
+vara en bild som, den ska ha samma storlek som bilden ovanför i samma div. På den högra sidan ska det 
+finnas en textruta som är lika lång som griden och bilden tillsammans och lika bred som textrutan ovanför. 
+Här i ska universiteten som finns radas upp. Namnet på universitetet ska vara en rubrik. Under skolan ska 
+program som erbjuds radas upp med vilken nivå de är på och bredvid programmet och under med en lite mindre 
+text vilket språk som kommer användas. Är det fler universitet i staden än vad som får plats i rutan ska 
+det finnas en scroll. Under bilden och textrutan ska det finnas kommentarer från tidigare studenter i en div. 
+Överst ska det stå en rubrik “Tidigare Studenter” och under denna ska kommentarerna stå in nya divar med 
+med vit bakgrundsfärg och svart text. Divarna ska ligga på en rad med lika långt avstånd till varandra. 
+På höger och vänster sida ska det finnas pilas som ska gå att trycka på för att bläddra bland kommentarerna. 
+Under studenterna ska det finnas en knapp som stänger det som dök upp när man tryckte på “Läs Mer” knappen 
+och får tillbaka ursprungs diven. knappen ska se likadan ut som dom de andra svart med vit text.
 
-programs.css - program sidan ska ha en bild som täcker hela skärmen. På denna bild ska det stå en rubrik: PROGRAM i svart transparant färg. I den nedre delen av bilden ska det finnas en text: Vad vill du plugga? med en sökruta under. De ska vara vita och något transparenta med svart text: Sök på program. Knappen ska ha display: flex; och justify-content: center;. När man scrollar ner ska varje program ha en egen div. Högst upp till vänster ska namnet på programmet stå i en fetstil rubrik med nivån jämte i en tunn font. Under detta ska landet och staden ska universitetet stå och under det ska språket på programmet stå. Under detta ska det finnas en Div med en grid där snittbetyget av LÄRARNA KLASSKAMRATER och KURSEN. Dessa ska stå på översta raden med betygen under varje kategori. Texten ska vara svart och lite större än texten ovanför. Diven ska vara placerad i linje med texten på vänster sida. På höger sida ska det finnas en fiv med transparant vit bakgrund som är placerad i höjd med rubriken. I denna ska det finnas en rubrik “Antagningsstatistik”, under detta ska det ska åren 2021-2017 placeras på en rad med snittbetyget under vardera år. Längst ner i diven ska det finnas kommentarer från tidigare studenter i en div. Överst ska det stå en rubrik “Tidigare Studenter” och under denna ska kommentarerna stå in nya divar med med vit bakgrundsfärg och svart text. Divarna ska ligga på en rad med lika långt avstånd till varandra. På höger och vänster sida ska det finnas pilas som ska gå att trycka på för att bläddra bland kommentarerna.
+programs.css - program sidan ska ha en bild som täcker hela skärmen. På denna bild ska det stå en 
+rubrik: PROGRAM i svart transparant färg. I den nedre delen av bilden ska det finnas en text: Vad vill du 
+plugga? med en sökruta under. De ska vara vita och något transparenta med svart text: Sök på program. 
+Knappen ska ha display: flex; och justify-content: center;. När man scrollar ner ska varje program ha en 
+egen div. Högst upp till vänster ska namnet på programmet stå i en fetstil rubrik med nivån jämte i en tunn 
+font. Under detta ska landet och staden ska universitetet stå och under det ska språket på programmet stå. 
+Under detta ska det finnas en Div med en grid där snittbetyget av LÄRARNA KLASSKAMRATER och KURSEN. Dessa 
+ska stå på översta raden med betygen under varje kategori. Texten ska vara svart och lite större än texten 
+ovanför. Diven ska vara placerad i linje med texten på vänster sida. På höger sida ska det finnas en fiv 
+med transparant vit bakgrund som är placerad i höjd med rubriken. I denna ska det finnas en 
+rubrik “Antagningsstatistik”, under detta ska det ska åren 2021-2017 placeras på en rad med snittbetyget 
+under vardera år. Längst ner i diven ska det finnas kommentarer från tidigare studenter i en div. 
+Överst ska det stå en rubrik “Tidigare Studenter” och under denna ska kommentarerna stå in nya divar med 
+med vit bakgrundsfärg och svart text. Divarna ska ligga på en rad med lika långt avstånd till varandra. 
+På höger och vänster sida ska det finnas pilas som ska gå att trycka på för att bläddra bland kommentarerna.
 
-contact.css - kontakt sidan ska ha en bild som täcker hela skärmen. På denna bild ska det stå en rubrik: KONTAKT i svart transparant färg. Under detta ska det vara en div med rubriken “Kontakta oss” med en textruta under, detta kommer att vara placerat på den vänstra siden. Till höger kommer det att vara en bild som har lika mycker marginal upp som ner. 
+contact.css - kontakt sidan ska ha en bild som täcker hela skärmen. På denna bild ska det stå en 
+rubrik: KONTAKT i svart transparant färg. Under detta ska det vara en div med rubriken “Kontakta oss” 
+med en textruta under, detta kommer att vara placerat på den vänstra siden. Till höger kommer det att 
+vara en bild som har lika mycker marginal upp som ner. 
 
-base.css - Högst upp på alla sidor ska det finnas en navigation som är lika bred som skärmen. Naven ska vara transparant. På HEM ska texten/ kategorierna vara vit då bakgrundsbilden är väldigt mörk. Även texten kommer va något transparent förutom HOME som kommer vara helvit med ett streck under för att markera att det är denna sida vi är på (:active). På alla andra sidor ska det se exakt likadant ut förutom att texten ska vara svart. I mitten på naven ska vi ha våran logga som kommer se likadan ut hela tiden. Till vänster har vi kategorierna HEM och DESTINATIONER på höger sida om loggan ska kategorierna PROGRAM och KONTAKT finnas. 
-Längst ner på varje sida ska det finnas en footer. Där ska loggan vara placerad i mitten med kategorierna i en stapel på vänster sida och kontaktinformation på häger.
+base.css - Högst upp på alla sidor ska det finnas en navigation som är lika bred som skärmen. 
+Naven ska vara transparant. På HEM ska texten/ kategorierna vara vit då bakgrundsbilden är väldigt mörk. 
+Även texten kommer va något transparent förutom HOME som kommer vara helvit med ett streck under för att 
+markera att det är denna sida vi är på (:active). På alla andra sidor ska det se exakt likadant ut 
+förutom att texten ska vara svart. I mitten på naven ska vi ha våran logga som kommer se likadan ut hela 
+tiden. Till vänster har vi kategorierna HEM och DESTINATIONER på höger sida om loggan ska kategorierna 
+PROGRAM och KONTAKT finnas. 
+Längst ner på varje sida ska det finnas en footer. Där ska loggan vara placerad i mitten med kategorierna 
+i en stapel på vänster sida och kontaktinformation på häger.
 
 Alla sidor kommer att ha en bakgrundsfärg: F2F2F2
 Divarna med bild och text + program divarna ska ha färgen: B2BCAB eller 97A8A7
