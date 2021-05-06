@@ -1,1 +1,146 @@
-hej
+Version 1
+##Funktionaliteter
+##Hem - första sidan 
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+
+Kunna bläddra sidvis vid studenternas kommentarer vid (< > pilarna om möjligt)
+
+Kontakta knappen - kommer till kontakt sidan, där kommer det att vara mer information om hur det går att kontakta oss
+
+Destinations bilden och program bilden på första sidan kan man klicka på och då kommer man vidare till en av sidorna 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+
+##Andra sidan - destinations sidan 
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+
+Man kan snabbsöka på land eller stad och därefter kommer det att dyka upp information om landet/staden. Klickar du därefter på läs mer dyker det ännu mer information. Diven blir större och bilder samt text dyker upp, sedan finns det en stäng knapp. Klickar man på stäng knappen så försvinner diven med extra information och det återgår till en normal div där stadens namn och liten text syns samt läs mer knappen. 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+
+##Tredje sidan - programsidan 
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+
+Man kan skriva in ett program och då dyker en div upp med blandad information. 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+##Fjärde sidan - kontaktsidan  
+På navigationen kan man klicka på alla rubriker och då kommer man in på den sidan man är intresserad av att gå in på. Loggan går också att klicka på och då kommer man till home page
+
+Den funktionaliteten du kan göra på kontaktsidan är att du kan klicka dig på kartan och då kommer du till google maps. 
+
+Footern - det ska vara snabblänkar till alla sidor samt en länk till kontakt sidan
+
+
+##Sidor
+HTML
+Hem - index.html
+Destinationer - destinations.html
+Program - programs.html
+Kontakta oss - contact.html
+
+CSS
+home.css
+destinations.css
+programs.css
+contact.css
+base.css
+
+Javascript
+home.js
+destinations.js
+programs.js
+contact.js
+database.js
+
+Hem- index.html
+home.css
+base.css
+home.js
+
+Destinationer-destinations.html
+destinations.css
+base.css
+destinations.js
+database.js
+
+Program- programs.html
+programs.css
+base.css
+programs.js
+database.js
+
+Kontakta oss - contact.html
+contact.css
+base.css
+contact.js
+
+
+#Funktioner
+
+-getCountry(country):: city[] 
+getCountry är en funktion som tar emot en parameter (country) - landet man söker på och returnerar en array som innehåller alla städer i det landet 
+Deklareras i destinations.js
+
+getCity(city) :: city(objekt)?
+getCity tar emot en parameter (city) och returnerar ett objekt som innehåller nycklar
+deklareras i destinations.js
+
+getProgram(program) :: program []
+getProgram tar emot en parameter (program) och returnerar ett objekt som innehåller nycklar 
+deklareras i programs.js
+
+readMoreButton(readMore) :: append(‘div’)
+readMoreButton är en knapp, addEventListener(‘click’, function){} visas en div med mer text/full text
+deklareras i destinations.js
+deklareras i programs.js
+
+closeDiv(closebutton) :: remove(‘div)
+closeDiv är en knapp, addEventListener(‘click’, function){} stänger/tar bort en div.
+deklareras i destinations.js
+deklareras i programs.js
+
+fastSearchCountry(country) :: country[]
+fastSearch finns på varje land i destinationer överst på bilden. Dessa länder kan man klicka på och addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan det landet som klickades på och appendar det under bilden
+deklareras i destinations.js
+
+
+fastSearchCity(country) :: city[]
+fastSearch finns på varje stad i destinationer överst på bilden. Dessa städer kan man klicka på och addEventListener(‘click’, function){} och då triggas en funktion. Funktionen returnerar sedan den staden som klickades på och appendar det under bilden.
+deklareras i destinations.js
+
+
+//Funktion för att bläddra mellan recensioner av studenter//
+let flip = new Flip('.carousel');
+let progressBar = document.querySelector('.student-bar');
+flip.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
+});
+deklareras i destinations.js
+deklareras i programs.js
+deklareras i index.js
+
+
+
+#Globala Variabler
+navigationen?
+footern?
+Läs mer knappen(readMore)
+Stäng knappen(closeButton)
+const readMore = document.getElementById('readmore');
+const closeButton  = document.getElementById('closebutton');
+const footer = document.getElementById(“footer”);
+const nav = document.getElementById(“nav”);
+
+(fråga Sebastian om globala variabler)
+
+#CSS
+home.css - ingen css 
+destinations.css - ingen css
+programs.css - ingen css
+contact.css - ingen css
+base.css - ingen css 
