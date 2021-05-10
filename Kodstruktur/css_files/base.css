@@ -38,3 +38,32 @@ nav > a {
   z-index: 10;
   margin: 0;
 }
+
+#footer {
+  height: 200px;
+  width: 100vw;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: auto;
+}
+
+#fotterLink {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 300px;
+}
+
+#fotterInfo {
+  width: 200px;
+  margin-left: 300px;
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}

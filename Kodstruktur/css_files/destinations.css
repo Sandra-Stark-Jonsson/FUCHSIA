@@ -1,3 +1,8 @@
+body {
+    height: 100vh;
+    margin: 0;
+  }
+  
 #destinations{
     text-decoration: underline #A3D2C2;
    
@@ -43,5 +48,4 @@ input {
     align-items: center;
     justify-content: center;
     gap: 20px;
-
 }
