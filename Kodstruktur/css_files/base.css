@@ -17,6 +17,8 @@ nav {
   display: flex;
   flex-basis: var(--hNav);
   z-index: 10;
+  height: 100px;
+  position: absolute;
 }
 
 nav > a {
@@ -25,4 +27,14 @@ nav > a {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #212121;
+}
+#logoSmall {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  z-index: 10;
+  margin: 0;
 }
