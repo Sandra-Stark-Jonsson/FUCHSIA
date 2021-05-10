@@ -4,7 +4,8 @@ body {
 }
 
 #homePicture {
-    width: 100px;
-    height: 100px;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
 }
