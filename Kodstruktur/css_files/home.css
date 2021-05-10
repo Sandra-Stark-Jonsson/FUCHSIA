@@ -1,5 +1,10 @@
-#homePicture {
-    width: 100vw;
+body {
     height: 100vh;
+    margin: 0;
+}
+
+#homePicture {
+    width: 100px;
+    height: 100px;
     margin: 0;
 }
