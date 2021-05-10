@@ -5,6 +5,8 @@ html {
 body {
   height: 100vh;
   margin: 0;
+  overflow: scoll;
+  background-color: #f2f2f2;
 }
 
 .topDiv {
