@@ -41,6 +41,14 @@ nav > a {
   margin: 0;
 }
 
+#logoSmallFotter {
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  z-index: 10;
+  margin: 0;
+}
+
 #footer {
   height: 200px;
   width: 100vw;
