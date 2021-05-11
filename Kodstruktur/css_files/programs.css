@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+#programsPicture {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    object-fit: cover;
+    z-index: -1;
+}
