@@ -26,12 +26,29 @@ body {
 }
 
 h1 {
-  font-size: 4.5vh;
+  grid-column: span 2;
+  font-size: 6.5vh;
   font-weight: lighter;
+  margin-left: 8vh;
+  margin-top: 8vh;
 }
 
-
 #map {
-  height: 200px;
-  width: 200px;
+  display: grid;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 30vw;
+  object-fit: cover;
+  justify-items: center;
+  align-content: center;
+}
+
+p {
+  margin-left: 8vh;
+  margin-right: 4vh;
+
+  max-width: 50vw;
+  max-height: 100%;
+  overflow: scroll;
+  font-size: 3.5vh;
 }
