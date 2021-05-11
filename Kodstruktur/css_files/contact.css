@@ -1,6 +1,38 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 #contactPicture {
-  margin: 0;
-  background-size: cover;
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  object-fit: cover;
+}
+#contactContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 60vh;
+  background-color: #b2bcab;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+#contactWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 4.5vh;
+  font-weight: lighter;
+}
+
+p {
+}
+
+#map {
+  height: 200px;
+  width: 200px;
 }
