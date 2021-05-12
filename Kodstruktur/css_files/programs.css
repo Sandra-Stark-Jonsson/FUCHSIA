@@ -3,6 +3,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+#programPage {
+    text-decoration: underline 3px #a3d2c2;
+}
+
 #programsPicture {
     width: 100vw;
     height: 100vh;
@@ -42,4 +46,8 @@ h2 {
 input {
    height: 20px;
    text-align: center;
+}
+
+#logoSmall {
+    cursor: pointer;
 }
