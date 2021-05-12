@@ -25,19 +25,24 @@ function DOMcities (cities){
 
     contaier.append(cityInfo());
 
-//Denna funktion fungerar inte men vi tror att vi är på rätt spår    
-
+    document.querySelector(".listContainer").append(container);
+    return container;
+    
+    
+    
+    //Denna funktion fungerar inte men vi tror att vi är på rätt spår    
+    
     function cityName(){
-
+        
         let cityDiv = document.createElement("div");
-
+        
         cityDiv.innerHTML = `<div>${cities.name}</div>`;
-
+        
         console.log(cityDiv);
-
+        
         return cityDiv;
     };
-
+    
 };
 
 function getCountry(database) {

@@ -57,18 +57,19 @@ nav > a {
   justify-content: center;
   align-items: center;
   flex-basis: auto;
+ 
 }
 
 #fotterLink {
-  width: 200px;
+  width: 4vw;
   display: flex;
   flex-direction: column;
-  margin-right: 300px;
+  margin-right: 30vw;
 }
 
 #fotterInfo {
-  width: 200px;
-  margin-left: 300px;
+  width: 4vw;
+  margin-left: 30vw;
   align-items: end;
   display: flex;
   flex-direction: column;
