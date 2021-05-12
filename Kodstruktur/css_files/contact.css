@@ -41,6 +41,8 @@ h1 {
   object-fit: cover;
   justify-items: center;
   align-content: center;
+  margin-bottom: 200px;
+  
 }
 
 p {
