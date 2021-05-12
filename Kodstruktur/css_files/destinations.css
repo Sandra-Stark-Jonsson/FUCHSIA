@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  height: 100vh;
 }
 
 #destinationsPage {
@@ -17,15 +18,14 @@ body {
 
 #countainerDestination {
   width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 30vh;
-    left: 0px;
- 
+  height: 300px;
+  background-color: #b2bcab;
+  position: relative;
+  z-index: 10;
 }
 
 #destinations {
-  text-decoration: underline #a3d2c2;
+  text-decoration: underline 2px #a3d2c2;
 }
 
 h1 {
@@ -45,7 +45,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 300px;
 }
 
 input {
@@ -72,7 +71,23 @@ input {
   background-color: aqua;
 }
 
+button {
+  height: 28px;
+  width: 30px;
+  border: none;
+  background-color: #e7e7e7;
+  box-shadow: 2px 2px #212121;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
 
-#logoSmall {
+button:hover {
   cursor: pointer;
+  background-color: #a3d2c2;
+}
+
+button:active {
+  background-color: #feca7d;
 }
