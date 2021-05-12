@@ -47,10 +47,25 @@ nav > a {
   background-size: cover;
   z-index: 10;
   margin-left: 30px;
-
 }
 
 #footer {
+
+}
+
+#fotterLink {
+
+}
+
+#footerImage {
+
+} 
+
+#footerInfo {
+  
+}
+
+/*#footer {
   height: 200px;
   width: 100vw;
   flex-grow: 1;
@@ -59,7 +74,6 @@ nav > a {
   align-items: center;
   flex-basis: auto;
   gap: 20vw;
- 
 }
 
 #fotterLink {
