@@ -17,7 +17,6 @@ body {
 nav {
   width: 100%;
   display: flex;
-  flex-basis: var(--hNav);
   z-index: 10;
   height: 100px;
   position: absolute;
@@ -46,50 +45,52 @@ nav > a {
   width: 150px;
   background-size: cover;
   z-index: 10;
-  margin-left: 30px;
 }
 
 #footer {
-
+  width: 100vw;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-#fotterLink {
+#footer > div {
+  height: 200px;
+  width: 100%;
+}
 
+#footerLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10vw;
+}
+
+.aFooter {
+  text-decoration: none;
+  color: black;
+  font-size: 2.3vh;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 #footerImage {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } 
 
 #footerInfo {
-  
-}
-
-/*#footer {
-  height: 200px;
-  width: 100vw;
-  flex-grow: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-basis: auto;
-  gap: 20vw;
+  align-items: flex-end;
+  margin-right: 10vw;
 }
 
-#fotterLink {
-  width: 30vw;
-  display: flex;
-  flex-direction: column;
-}
-
-#fotterInfo {
-  width: 30vw;
-  margin-left: 300px;
-  align-items: end;
-  display: flex;
-  flex-direction: column;
-}
-
-p {
-  margin: 0;
+.pFooter {
+  margin-bottom: 5px;
+  margin-top: 5px;
 }

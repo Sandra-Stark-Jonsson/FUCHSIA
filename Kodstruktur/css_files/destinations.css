@@ -4,6 +4,10 @@ body {
   height: 100vh;
 }
 
+#destinationsPage {
+  text-decoration: underline 3px #a3d2c2;
+}
+
 #destinationPicture {
   width: 100vw;
   height: 100vh;

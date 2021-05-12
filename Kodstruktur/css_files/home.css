@@ -1,8 +1,12 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  
 }
 
+#homePage {
+  text-decoration: underline 3px #A3D2C2;
+}
 /* bilden */
 .topDiv {
   background-color: #212121;
@@ -67,6 +71,7 @@ p {
   border-radius: 10px 10px 10px 10px;
   margin-top: 3vh;
   border: none;
+  cursor: pointer;
 }
 
 #imageContact {
@@ -136,6 +141,7 @@ img {
   border: none;
   margin-bottom: 2vh;
   font-size: medium;
+  cursor: pointer;
 }
 
 /* nav */

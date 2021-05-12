@@ -1,60 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Jetlag Students</title>
-    <link rel="stylesheet" href="css_files/base.css" />
-    <link rel="stylesheet" href="css_files/destinations.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="topDiv">
-      <nav>
-        <a href="index.html">Hem</a>
-        <a href="destinations.html">Destinationer</a>
-        <div id="navLogo">
-          <img id="logoSmall" src="bilder/logosmall.png" alt="logo" />
-        </div>
-        <a href="programs.html">Program</a>
-        <a href="contact.html">Kontakt</a>
-      </nav>
-      <div id="pictureContainer">
-        <img
-          id="destinationPicture"
-          src="bilder/caleb-george-G7hmn5v3zU8-unsplash.jpg"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <title>Jetlag Students</title>
+  <link rel="stylesheet" href="css_files/base.css" />
+  <link rel="stylesheet" href="css_files/destinations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="topDiv">
+    <nav>
+      <a href="index.html">Hem</a>
+      <a href id="destinationsPage"="destinations.html">Destinationer</a>
+      <div id="navLogo">
+        <a href="index.html">
+          <img id="logoSmall" src="bilder/logosmall.png" alt="logo">
+        </a>
       </div>
+      <a href="programs.html">Program</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <div id="pictureContainer">
+      <img id="destinationPicture" src="bilder/caleb-george-G7hmn5v3zU8-unsplash.jpg" />
     </div>
-    <!--
+  </div>
+  <!--
             Detta hät under ska ligga i TOPDIV på bilden
         -->
-    <div id="countainerDestination">
-      <h1>Destinationer</h1>
-      <div id="countriesFirst">
-        <div>Argentina</div>
-        <div>Australien</div>
-        <div>Storbritanien</div>
-        <div>Spanien</div>
-        <div>Mexico</div>
-      </div>
+  <div id="countainerDestination">
+    <h1>Destinationer</h1>
+    <div id="countriesFirst">
+      <div>Argentina</div>
+      <div>Australien</div>
+      <div>Storbritanien</div>
+      <div>Spanien</div>
+      <div>Mexico</div>
+    </div>
 
-      <div id="countriesSecond">
-        <div>USA</div>
-        <div>Sverige</div>
-        <div>Chile</div>
-        <div>Frankrike</div>
-      </div>
-
-      <h2>Vart vill du åka?</h2>
+    <div id="countriesSecond">
+      <div>USA</div>
+      <div>Sverige</div>
+      <div>Chile</div>
+      <div>Frankrike</div>
+    </div>
 
       <div id="search">
         <input id="destinationsCountry" type="text" placeholder="Sök Land..." />
@@ -91,25 +83,29 @@
         </button>
       </div>
     </div>
+  </div>
 
-    <div id="main"></div>
+  <div id="main"></div>
 
-    <div id="footer">
-      <div id="fotterLink">
-        <a href="destinations.html">Destinationer</a>
-        <a href="programs.html">Program</a>
-        <a href="contact.html">Kontakt</a>
-      </div>
-
-      <img id="logoSmallFotter" src="bilder/logosmall.png" alt="logosmall" />
-
-      <div id="fotterInfo">
-        <p>Mail:jetlagstudent@gmail.com</p>
-        <p>Telefon: 070-000 00 00</p>
-      </div>
+  <div id="footer">
+    <div id="footerLink">
+      <a class="aFooter" href="destinations.html">Destinationer</a>
+      <a class="aFooter" href="programs.html">Program</a>
+      <a class="aFooter" href="contact.html">Kontakt</a>
     </div>
 
-    <script src="js_files/database.js"></script>
-    <script src="js_files/destinations.js"></script>
-  </body>
+    <div id="footerImage">
+      <img id="logoSmallFotter" src="bilder/logosmall.png" alt="logosmall">
+    </div>
+      
+    <div id="footerInfo">
+        <p class="pFooter">Mail: jetlagstudent@gmail.com</p>
+        <p class="pFooter">Telefon: 070-000 00 00</p> 
+    </div>
+  </div>
+
+  <script src="js_files/database.js"></script>
+  <script src="js_files/destinations.js"></script>
+</body>
+
 </html>
