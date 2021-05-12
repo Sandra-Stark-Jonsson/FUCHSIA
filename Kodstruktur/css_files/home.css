@@ -1,11 +1,10 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  
 }
 
 #homePage {
-  text-decoration: underline 3px #A3D2C2;
+  text-decoration: underline 3px #a3d2c2;
 }
 /* bilden */
 .topDiv {
@@ -56,10 +55,15 @@ body {
   margin-bottom: 3vh;
   font-size: 5.5vh;
   font-weight: lighter;
+  max-height: 25vh;
+  overflow: scroll;
+  overflow: hidden;
 }
 
 p {
   font-size: 2vh;
+  overflow: scroll;
+  max-height: 30vh;
 }
 
 #button {
@@ -157,4 +161,3 @@ nav > a {
   height: 100px;
   width: 100px;
 }
-
