@@ -12,12 +12,18 @@ body {
 }
 
 #countainerDestination {
+<<<<<<< HEAD
   width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 30vh;
-  left: 0px;
+  height: 300px;
+  background-color: #b2bcab;
+=======
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    left:0px;
 
+>>>>>>> a670304aec3009b410c990b3f821c3ddbd087789
 }
 
 #destinations {
@@ -46,7 +52,6 @@ h2 {
 
 input {
   height: 20px;
-  text-align: center;
 }
 
 #countriesFirst {
