@@ -10,3 +10,34 @@ body {
     object-fit: cover;
     z-index: -1;
 }
+
+#countainerPrograms {
+    width: 100vw;
+    height: 300px;
+    background-color: #b2bcab;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#searchPrograms{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}
+
+input {
+   height: 20px;
+   text-align: center;
+}
