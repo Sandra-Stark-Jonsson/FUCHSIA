@@ -1,58 +1,90 @@
-"use strict "
+"use strict ";
 
-let DOMcontainer = document.createElement("container");
+console.log(COUNTRIES);
 
-document.querySelector("#main").append(DOMcontainer);
+// function DOMcities(cities) {
+//   let container = document.createElement("div");
+//   container.classList.add("country");
 
-main.innerHTML = `
-    <div class="listContainer"></div>
-`;
+//   // Add Name
+//   container.append(countryName());
 
-let database = {
-    baseArray: CITIES,
-    filterKey: "name",
-    filterLabelKey:"",
-    DOMcreater: DOMcities
-};
+//   // // Add Courses
+//   // container.append(studentCourses());
 
-console.log(database);
+//   return container;
+//   console.log(container);
+// }
 
-function DOMcities (cities){
-    let contaier = document.createElement ("div");
-    contaier.classList.add("cities");
+// // We can put these declarations after the return because they are function declarations,
+// // not "normal" executable code. "Normal" executable code is not executed
+// // if it is placed after a return instruction.
 
-    contaier.append(cityName());
+// function studentName(){
+//     //ska inkludera namn, efternamn, total credits
+//     //skicka som en div
+//     let studentName = document.createElement("div");
+//     studentName.classList.add("studentName")
 
-    contaier.append(cityInfo());
+//     //TOTAL CREDITS
+//     let totalCreditsOfStudent = 0;
+//     student.courses.forEach( course => {
+//        totalCreditsOfStudent += course.passedCredits;
+//     });
 
-//Denna funktion fungerar inte men vi tror att vi är på rätt spår    
+//     //TEXT
+//     studentName.textContent = `${student.firstName} ${student.lastName} (total credits: ${totalCreditsOfStudent})`
 
-    function cityName(){
+//     return studentName;
+// }
 
-        let cityDiv = document.createElement("div");
+// let DOMcontainer = document.createElement("container");
 
-        cityDiv.innerHTML = `<div>${cities.name}</div>`;
+// document.querySelector("#main").append(DOMcontainer);
 
-        console.log(cityDiv);
+// main.innerHTML = `
+//     <div class="listContainer"></div>
+// `;
 
-        return cityDiv;
-    };
+// let database = {
+//   baseArray: CITIES,
+//   filterKey: "name",
+//   filterLabelKey: "",
+//   DOMcreater: DOMcities,
+// };
 
-};
+// console.log(database);
 
-function getCountry(database) {
+// function DOMcities(cities) {
+//   let contaier = document.createElement("div");
+//   contaier.classList.add("cities");
 
-    let {baseArray, filterKey, filterLabelKey} = database;
+//   contaier.append(main());
 
-    let contaier = document.createElement("div");
-    contaier.classList.add("input");
-    
-    let input = contaier.querySelector("#destinationsCountry");
-    input.addEventListener("keyup", function() {
+//   contaier.append(main());
 
-        document.querySelector("")
+//   //Denna funktion fungerar inte men vi tror att vi är på rätt spår
 
+//   function cityName() {
+//     let cityDiv = document.createElement("div");
 
+//     cityDiv.innerHTML = `<div>${cities.name}</div>`;
 
-    });
-};
+//     console.log(cityDiv);
+
+//     return cityDiv;
+//   }
+// }
+// console.log(DOMcities);
+
+// function getCountry(database) {
+//   let { baseArray, filterKey, filterLabelKey } = database;
+
+//   let contaier = document.createElement("div");
+//   contaier.classList.add("input");
+
+//   let input = contaier.querySelector("#destinationsCountry");
+//   input.addEventListener("keyup", function () {
+//     document.querySelector("");
+//   });
+// }

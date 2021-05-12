@@ -46,7 +46,8 @@ nav > a {
   width: 150px;
   background-size: cover;
   z-index: 10;
-  margin: 0;
+  margin-left: 30px;
+
 }
 
 #footer {
@@ -57,13 +58,15 @@ nav > a {
   justify-content: center;
   align-items: center;
   flex-basis: auto;
+  gap: 20vw;
+ 
 }
 
 #fotterLink {
   width: 30vw;
   display: flex;
   flex-direction: column;
-  margin-right: 300px;
+  */
 }
 
 #fotterInfo {
@@ -71,7 +74,7 @@ nav > a {
   margin-left: 300px;
   align-items: end;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;*/
 }
 
 p {
