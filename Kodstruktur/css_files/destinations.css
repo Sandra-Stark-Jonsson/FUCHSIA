@@ -13,8 +13,11 @@ body {
 
 #countainerDestination {
   width: 100vw;
-  height: 300px;
-  background-color: #b2bcab;
+  height: 100vh;
+  position: absolute;
+  top: 30vh;
+  left: 0px;
+
 }
 
 #destinations {
@@ -43,6 +46,7 @@ h2 {
 
 input {
   height: 20px;
+  text-align: center;
 }
 
 #countriesFirst {
