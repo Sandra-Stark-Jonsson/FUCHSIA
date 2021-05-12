@@ -60,14 +60,14 @@ nav > a {
 }
 
 #fotterLink {
-  width: 200px;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   margin-right: 300px;
 }
 
 #fotterInfo {
-  width: 200px;
+  width: 30vw;
   margin-left: 300px;
   align-items: end;
   display: flex;
