@@ -1,53 +1,76 @@
 body {
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 #programPage {
-    text-decoration: underline 3px #a3d2c2;
+  text-decoration: underline 3px #a3d2c2;
 }
 
 #programsPicture {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    object-fit: cover;
-    z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  object-fit: cover;
+  z-index: -1;
 }
 
 #containerPrograms {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 30vh;
-    left: 0px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 30vh;
+  left: 0px;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14vh;
 }
 
 h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#searchPrograms{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 300px;
+#searchPrograms {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 input {
-   height: 20px;
-   text-align: center;
+  height: 20px;
+  text-align: center;
 }
 
 #logoSmall {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+button {
+  height: 28px;
+  width: 30px;
+  border: none;
+  background-color: #e7e7e7;
+  box-shadow: 2px 2px #212121;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #a3d2c2;
+}
+
+button:active {
+  background-color: #feca7d;
+}
+
+#countriesFirst {
 }
