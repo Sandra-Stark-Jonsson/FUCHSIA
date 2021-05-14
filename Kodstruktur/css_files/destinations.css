@@ -101,3 +101,18 @@ button:active {
   width: 100%;
   background-color: #b2bcab;
 }
+
+#countriesFirst {
+  color: white;
+  background-color: rgba(33, 33, 33, 20%);
+  font-size: 5vh;
+  font-weight: bolder;
+}
+
+#countriesSecond {
+  color: white;
+  background-color: rgba(33, 33, 33, 20%);
+  font-size: 5vh;
+  margin-bottom: 2vh;
+  font-weight: bolder;
+}
