@@ -1,6 +1,17 @@
 "use strict ";
 
-console.log(COUNTRIES);
+document.querySelector("#buttonCity").addEventListener("click", function () {
+  let inputText = document.querySelector("#destinationsCity").value;
+  let filterCities = CITIES.filter(function (city) {
+    if (city.name.includes(inputText)) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+});
+filerCities.forEach(function (city) {});
+// console.log(COUNTRIES);
 
 // function DOMcities(cities) {
 //   let container = document.createElement("div");
@@ -14,28 +25,6 @@ console.log(COUNTRIES);
 
 //   return container;
 //   console.log(container);
-// }
-
-// // We can put these declarations after the return because they are function declarations,
-// // not "normal" executable code. "Normal" executable code is not executed
-// // if it is placed after a return instruction.
-
-// function studentName(){
-//     //ska inkludera namn, efternamn, total credits
-//     //skicka som en div
-//     let studentName = document.createElement("div");
-//     studentName.classList.add("studentName")
-
-//     //TOTAL CREDITS
-//     let totalCreditsOfStudent = 0;
-//     student.courses.forEach( course => {
-//        totalCreditsOfStudent += course.passedCredits;
-//     });
-
-//     //TEXT
-//     studentName.textContent = `${student.firstName} ${student.lastName} (total credits: ${totalCreditsOfStudent})`
-
-//     return studentName;
 // }
 
 // let DOMcontainer = document.createElement("container");
