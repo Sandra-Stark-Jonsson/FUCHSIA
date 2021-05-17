@@ -27,8 +27,8 @@ function DOMcities(bild, name, text, id) {
   <div class="startDiv">
     <img class="startImage" src = 'Images/${bild}'>
     <div class= "cityContainer">
-        <h1>${name}</h1>
-        <p>${text}</p>
+        <h1 id="cityH1">${name}</h1>
+        <p id="cityP">${text}</p>
         <button>Läs Mer</button>
     </div>
   </div>  
