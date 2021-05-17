@@ -1,5 +1,5 @@
 "use strict ";
-
+//sök på städer
 document.querySelector("#buttonCity").addEventListener("click", function () {
   let inputText = document.querySelector("#destinationsCity").value;
   inputText = inputText.toLowerCase();
@@ -65,53 +65,31 @@ function createUniversity(id){
   }); 
 } 
 
-// let DOMcontainer = document.createElement("container");
 
-// document.querySelector("#main").append(DOMcontainer);
 
-// main.innerHTML = `
-//     <div class="listContainer"></div>
-// `;
 
-// let database = {
-//   baseArray: CITIES,
-//   filterKey: "name",
-//   filterLabelKey: "",
-//   DOMcreater: DOMcities,
-// };
+//sök på länder
+document.querySelector("#buttonCountry").addEventListener("click", function () {
+  let inputText = document.querySelector("#destinationsCountry").value;
+  inputText = inputText.toLowerCase();
+  let filterCountries = COUNTRIES.filter(function (country) {
+    if (country.name.toLowerCase().includes(inputText)) {
+      return true;
+    } else {
+      return false;
+    }
+  });
 
-// console.log(database);
+  console.log(filterCountries);
+  filterCities.forEach(function (country) {
+    let list = document.querySelector("#listContainer");
+    list.append(DOMcities(country.imagesNormal[0], country.name, country.text, country.id));
 
-// function DOMcities(cities) {
-//   let contaier = document.createElement("div");
-//   contaier.classList.add("cities");
+  });
+});
 
-//   contaier.append(main());
 
-//   contaier.append(main());
+  
 
-//   //Denna funktion fungerar inte men vi tror att vi är på rätt spår
+ //Clicka på länder
 
-//   function cityName() {
-//     let cityDiv = document.createElement("div");
-
-//     cityDiv.innerHTML = `<div>${cities.name}</div>`;
-
-//     console.log(cityDiv);
-
-//     return cityDiv;
-//   }
-// }
-// console.log(DOMcities);
-
-// function getCountry(database) {
-//   let { baseArray, filterKey, filterLabelKey } = database;
-
-//   let contaier = document.createElement("div");
-//   contaier.classList.add("input");
-
-//   let input = contaier.querySelector("#destinationsCountry");
-//   input.addEventListener("keyup", function () {
-//     document.querySelector("");
-//   });
-// }
