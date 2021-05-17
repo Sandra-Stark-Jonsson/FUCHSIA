@@ -94,7 +94,7 @@ button:active {
   background-color: #feca7d;
 }
 
-#main {
+#listContainer {
   margin-top: 10vh;
   margin-bottom: 10vh;
   height: 100vh;

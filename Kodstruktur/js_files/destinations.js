@@ -11,7 +11,10 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
     }
   });
   console.log(filterCities);
-  filerCities.forEach(function (city) {});
+  filterCities.forEach(function (city) {
+    let list = document.querySelector("#listContainer");
+    list.append(DOMcities(city.imagesNormal[0], city.name, city.text));
+  });
 });
 
 // console.log(COUNTRIES);
@@ -21,7 +24,7 @@ function DOMcities(bild, name, text) {
   container.classList.add("cities");
 
   container.innerHTML = `
-    <img src = '${bild}'>
+    <img src = 'Images/${bild}'>
     <div class= "cityContainer">
         <h1>${name}</h1>
         <p>${text}</p>
