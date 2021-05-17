@@ -29,7 +29,7 @@ function DOMcities(bild, name, text, id) {
     <div class= "cityContainer">
         <h1 id="cityH1">${name}</h1>
         <p id="cityP">${text}</p>
-        <button>Läs Mer</button>
+        <button class="readMoreButton">Läs Mer</button>
     </div>
   </div>  
   <div class="extra">
@@ -43,27 +43,23 @@ function DOMcities(bild, name, text, id) {
   </div>
   `;
 
-  
-   
   return container;
 }
 
-function createUniversity(id){
-
-  let universityCity = UNIVERSITIES.filter(element => element.cityID === id);
+function createUniversity(id) {
+  let universityCity = UNIVERSITIES.filter((element) => element.cityID === id);
   console.log(universityCity);
 
-  universityCity.forEach(skola => {
-    
+  universityCity.forEach((skola) => {
     let universityDiv = document.createElement("div");
     universityDiv.innerHTML = `
 
     <h2>${skola.name}</h2>
     
-    `
+    `;
     return universityDiv;
-  }); 
-} 
+  });
+}
 
 // let DOMcontainer = document.createElement("container");
 

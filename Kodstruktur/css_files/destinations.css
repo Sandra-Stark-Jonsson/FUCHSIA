@@ -68,8 +68,6 @@ input {
 }
 
 button {
-  height: 28px;
-  width: 30px;
   border: none;
   background-color: #e7e7e7;
   box-shadow: 2px 2px #212121;
@@ -77,6 +75,12 @@ button {
   margin-right: 1vh;
   transition-property: all;
   transition-duration: 0.5s;
+}
+
+#buttonCity,
+#buttonCountry {
+  height: 28px;
+  width: 30px;
 }
 
 button:hover {
@@ -127,7 +131,7 @@ button:active {
 
 .startImage {
   height: 50vh;
-  width: 45vw;  
+  width: 45vw;
   margin-left: 10vw;
 }
 
@@ -148,3 +152,12 @@ button:active {
   font-size: 5.5vh;
 }
 
+.readMoreButton {
+  height: 6vh;
+  width: 10vw;
+  background-color: #212121;
+  color: #e7e7e7;
+  border-radius: 1vh;
+  box-shadow: 3px 3px #97a8a7;
+  font-size: 2vh;
+}
