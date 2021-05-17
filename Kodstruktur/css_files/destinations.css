@@ -116,3 +116,8 @@ button:active {
   margin-bottom: 2vh;
   font-weight: bolder;
 }
+
+.cities {
+  background-color: #97a8a7;
+  margin-bottom: 10vh;
+}
