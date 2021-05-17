@@ -2,30 +2,35 @@
 
 document.querySelector("#buttonCity").addEventListener("click", function () {
   let inputText = document.querySelector("#destinationsCity").value;
+  inputText = inputText.toLowerCase();
   let filterCities = CITIES.filter(function (city) {
-    if (city.name.includes(inputText)) {
+    if (city.name.toLowerCase().includes(inputText)) {
       return true;
     } else {
       return false;
     }
   });
+  console.log(filterCities);
+  filerCities.forEach(function (city) {});
 });
-filerCities.forEach(function (city) {});
+
 // console.log(COUNTRIES);
 
-// function DOMcities(cities) {
-//   let container = document.createElement("div");
-//   container.classList.add("country");
+function DOMcities(bild, name, text) {
+  let container = document.createElement("div");
+  container.classList.add("cities");
 
-//   // Add Name
-//   container.append(countryName());
+  container.innerHTML = `
+    <img src = '${bild}'>
+    <div class= "cityContainer">
+        <h1>${name}</h1>
+        <p>${text}</p>
+        <button>Läs Mer</button>
+    </div>
+`;
 
-//   // // Add Courses
-//   // container.append(studentCourses());
-
-//   return container;
-//   console.log(container);
-// }
+  return container;
+}
 
 // let DOMcontainer = document.createElement("container");
 
