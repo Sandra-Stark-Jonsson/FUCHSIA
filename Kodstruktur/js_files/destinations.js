@@ -61,9 +61,6 @@ function createUniversity(id) {
   });
 }
 
-
-
-
 //sök på länder
 document.querySelector("#buttonCountry").addEventListener("click", function () {
   let inputText = document.querySelector("#destinationsCountry").value;
@@ -79,13 +76,10 @@ document.querySelector("#buttonCountry").addEventListener("click", function () {
   console.log(filterCountries);
   filterCities.forEach(function (country) {
     let list = document.querySelector("#listContainer");
-    list.append(DOMcities(country.imagesNormal[0], country.name, country.text, country.id));
-
+    list.append(
+      DOMcities(country.imagesNormal[0], country.name, country.text, country.id)
+    );
   });
 });
 
-
-  
-
- //Clicka på länder
-
+//Clicka på länder
