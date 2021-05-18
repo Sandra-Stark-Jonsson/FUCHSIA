@@ -26,14 +26,6 @@ body {
   align-items: center;
 }
 
-/* studentkommentarer */
-#homeStudents {
-  box-sizing: border-box;
-  height: 30vh;
-  margin-bottom: 10vh;
-  width: 100%;
-}
-
 /* länk till kontaktsidan */
 #homeContact {
   width: 100%;
@@ -165,10 +157,19 @@ nav > a {
   width: 100px;
 }
 
+/* studentkommentarer */
+#homeStudents {
+  box-sizing: border-box;
+  width: 60%;
+  margin: auto;
+  border: 2px solid black;
+}
+/*karusellen*/
+
 .carousel {
   background: #f2f2f2;
   display: flex;
-  height: 100%;
+  height: 200px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -186,19 +187,7 @@ nav > a {
   align-items: center;
 }
 
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: #f2f2f2;
-}
-
-.flickity-page-dots {
-  bottom: -40px;
-}
+/* buttons karusellen */
 
 #firstCell,
 #secondCell,
@@ -207,7 +196,6 @@ nav > a {
 #fourthCell,
 #fitfthCell,
 #sixthCell {
-  display: none;
 }
 
 .button-prev,

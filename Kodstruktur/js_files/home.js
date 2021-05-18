@@ -1,8 +1,35 @@
-var flkty = new Flickity(".carousel");
+//karusellen
+const carouselSlide = document.querySelector(".carousel");
+const carouselCell = document.querySelectorAll(".carousel .carousel-cell");
 
-var progressBar = document.querySelector(".progress-bar");
+//the buttons
+const prevButton = document.querySelector(".button-prev");
+const nextButton = document.querySelector(".button-next");
 
-flkty.on("scroll", function (progress) {
-  progress = Math.max(0, Math.min(1, progress));
-  progressBar.style.width = progress * 100 + "%";
+// //counter
+let counter = 1;
+const size = carouselCell[0].clientWidth;
+
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+//Button Event listners
+nextButton.addEventListener("click", function () {
+  carouselSlide.style.transition = "transform 0.4 ease-in-out";
+  counter++;
+  carouselSlide.style.transform = 'translateX(" + -size * counter + "px)';
+});
+
+prevButton.addEventListener("click", function () {
+  carouselSlide.style.transition = "transform 0.4 ease-in-out";
+  counter--;
+  carouselSlide.style.transform = 'translateX(" + -size * counter + "px)';
+});
+
+//Reset the transition between cells
+carouselSlide.addEventListener("transitionend", function () {
+  if (carouselCell[counter].id === "sixthCell") {
+    carouselSlide.style.transition = "none";
+    counter = carouselCell.length - 1;
+    carouselSlide.style.transform = 'translateX(" + -size * counter + "px)';
+  }
 });
