@@ -170,17 +170,17 @@ nav > a {
   display: flex;
   height: 100%;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-cell {
   width: 66%;
   height: 25vh;
-  margin-right: 10px;
+  margin: 10px;
   background: #949c8e;
   border-radius: 5px;
   counter-increment: carousel-cell;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,15 +193,52 @@ nav > a {
   content: counter(carousel-cell);
   line-height: 200px;
   font-size: 80px;
-  color: white;
-}
-
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background: #212121;
+  color: #f2f2f2;
 }
 
 .flickity-page-dots {
   bottom: -40px;
+}
+
+#firstCell,
+#secondCell,
+#thirdCell {
+}
+#fourthCell,
+#fitfthCell,
+#sixthCell {
+  display: none;
+}
+
+.button-prev,
+.button-next {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(242, 242, 242, 0.3);
+  border: none;
+  font-size: 3vh;
+  border-radius: 50%;
+  box-shadow: 1px 1px rgba(242, 242, 242, 0.2);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.button-next {
+  position: absolute;
+  right: 1px;
+  margin-right: 15px;
+}
+
+.button-prev {
+  position: absolute;
+  left: 1px;
+  margin-left: 15px;
+}
+
+.button-prev:hover,
+.button-next:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  border: 1px #212121;
 }
