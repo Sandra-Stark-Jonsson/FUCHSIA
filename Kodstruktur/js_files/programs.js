@@ -14,23 +14,30 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
   console.log(filterPrograms);
   filterPrograms.forEach(function (program) {
     let list = document.querySelector("#listContainer");
-    list.append(DOMprograms(program.name, program.universityID));
+    list.append(DOMprograms(program.name, program.universityID, program.level, program.language));
   
   });
 });
 
 
 
-function DOMprograms(name, universityID){
+function DOMprograms(name, universityID, level, language){
   let container = document.createElement("div");
   container.classList.add("program");
 
   container.innerHTML = `
   <div class="startdiv">
     <div class="programContainer">
-      <hi id="programH1">${name}</h1>
-      <p id="programP">${universityID}</p>
+      <div id="rubrik"></div>
+        <hi id="programH1">${name}</h1>
+        <p id="level"> - ${level}</p>
+      </div>
+      <div id="info">
+        <p class="programP">${universityID}</p>
+        <p class="programP">${language}</p>
+      </div>  
     </div>
+    <div></div>
   </div>
   `;
   return container;
