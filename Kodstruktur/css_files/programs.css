@@ -17,7 +17,6 @@ body {
 
 #containerPrograms {
   width: 100vw;
-  height: 100vh;
   position: absolute;
   top: 30vh;
   left: 0px;
@@ -70,4 +69,17 @@ button:hover {
 
 button:active {
   background-color: #feca7d;
+}
+
+.startdiv {
+  height: 70vh;
+  width: 100vw;
+  background-color: #b2bcab;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#rubrik {
+  display: flex;
+  flex-direction: row;
 }
