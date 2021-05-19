@@ -1,5 +1,5 @@
 //karusellen
-/*const carouselSlide = document.querySelector(".carousel");
+const carouselSlide = document.querySelector(".carousel");
 const carouselCell = document.querySelectorAll(".carousel .carousel-cell");
 
 //the buttons
@@ -45,4 +45,3 @@ carouselSlide.addEventListener('transitionend', function () {
   }
 });
 
-*/
