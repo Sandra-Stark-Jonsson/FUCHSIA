@@ -74,12 +74,64 @@ button:active {
 .startdiv {
   height: 70vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
   background-color: #b2bcab;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
-#rubrik {
+.programContainer {
   display: flex;
   flex-direction: row;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+}
+
+.allInfo {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#programH1 {
+  font-size: 5vh;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#info {
+  border: 1px solid black;
+}
+
+#studentReview {
+  height: 5vh;
+  border: 1px solid black;
+}
+
+.programP {
+
+}
+
+#grades {
+  width: 30vw;
+  height: 15vh;
+  margin-left: 5vw;
+  background-color: rgba(255,255,255, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.eg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.students {
+  border: 1px solid black;
 }
