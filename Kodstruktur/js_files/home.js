@@ -37,12 +37,12 @@ prevButton.addEventListener("click", function () {
 
 //Reset the transition between cells prev button
 carouselSlide.addEventListener('transitionend', function () {
-  if (carouselCell[counter].id === "firstCell") {
+  if (carouselCell[counter].id === "sixthCell") {
     //carouselSlide.style.transition = "none";
-    counter = carouselCell.length - 2;
+    counter = carouselCell.length - 0;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
-  if (carouselCell[counter].id === "sixthCell") {
+  else if (carouselCell[counter].id === "firstCell") {
     //carouselSlide.style.transition = "none";
     counter = carouselCell.length - counter;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
