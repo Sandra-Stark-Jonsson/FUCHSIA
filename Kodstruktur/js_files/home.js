@@ -20,8 +20,6 @@ let makediv = document.createElement("div");
 nextButton.addEventListener("click", function () {
   //bug preventor
   if (counter >= carouselCell.length - 1) return;
-  console.log('size' + size);
-  console.log('counter' + counter);
   carouselSlide.style.transition = "transform 0.4s ease-in-out";
   counter++;
   carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
