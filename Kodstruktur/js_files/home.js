@@ -12,6 +12,10 @@ const size = carouselCell[2].clientWidth;
 
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
+// divar 
+let makediv = document.createElement("div");
+
+
 //Button Event listners
 nextButton.addEventListener("click", function () {
   //bug preventor
@@ -44,4 +48,5 @@ carouselSlide.addEventListener('transitionend', function () {
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
 });
+
 
