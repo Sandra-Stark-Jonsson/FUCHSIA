@@ -25,14 +25,45 @@ function DOMprograms(name, universityID, level, language, entryGrades){
   let container = document.createElement("div");
   container.classList.add("program");
 
+let degree;
+  if (level === 0){
+    degree = ``
+  } else if (level > 0){
+    degree = LEVELS[level-1]
+  }
+
+let school;
+  UNIVERSITIES.forEach(function(skola){
+    if (skola.id === universityID){
+      school = skola.name
+    }
+  });
+  
+let talk;
+  LANGUAGES.forEach(function(sprak){
+    if (sprak.id === language){
+      talk = sprak.name
+    }
+  }); 
+
+let stad;
+  CITIES.forEach(function(staden){
+    if (staden.universityID === name){
+      stad = staden.name 
+    }
+  });
+ 
+
   container.innerHTML = `
   <div class="startdiv">
     <div class="programContainer">
       <div class="allInfo">
-        <h1 id="programH1">${name} - ${level}</h1>
+        <h1 id="programH1">${name} - ${degree}</h1>
+
         <div id="info">
-          <p class="programP">${universityID}</p>
-          <p class="programP">${language}</p>
+          <p class="programP" id="skola">${school}</p>
+          <p class="programP">${talk}</p>
+          <p class="programP">${stad}</p>
         </div>  
         <div id="studentReview"></div>
       </div>
@@ -54,31 +85,3 @@ function DOMprograms(name, universityID, level, language, entryGrades){
   `;
   return container;
 }
-
-
-  //function DOMcities(bild, name, text, id) {
-  //  let container = document.createElement("div");
-  //  container.classList.add("cities");
-  
-  //  container.innerHTML = `
-  //  <div class="startDiv">
-  //    <img class="startImage" src = 'Images/${bild}'>
-  //    <div class= "cityContainer">
-  //        <h1 id="cityH1">${name}</h1>
-  //        <p id="cityP">${text}</p>
-  //        <button class="readMoreButton">Läs Mer</button>
-  //    </div>
-  //  </div>  
-  //  <div class="extra">
-  //    <div class="gradeImage">
-  //      <div class="grades"></div>
-  //      <img class="extraImage" src='Images/${bild}'>
-  //    </div>
-  //    <div class="universitet">
-  //      ${createUniversity(id)}
-  //    </div>
-  //  </div>
-  //  `;
-  //
-  //  return container;
-  //}
