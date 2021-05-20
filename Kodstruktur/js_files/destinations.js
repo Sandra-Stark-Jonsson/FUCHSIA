@@ -88,8 +88,6 @@ function createUniversity(id) {
 
 //sök på länder
 
-
-//Clicka på länder
 document.querySelector("#buttonCountry").addEventListener("click", function () {
   let inputText = document.querySelector("#destinationsCountry").value;
   inputText = inputText.toLowerCase();
@@ -150,6 +148,12 @@ function createCities(idCountry) {
       let cityh2 = document.createElement("h2");
       cityh2.innerHTML = city.name;
       cityelement.append(cityh2);
+
+      let citytext = document.createElement("h2");
+      citytext.innerHTML = city.text;
+      cityelement.append(citytext);
+
+
 
       UNIVERSITIES.forEach(function (uni) {
         if (uni.cityID === city.id) {
