@@ -47,9 +47,9 @@ let talk;
   }); 
 
 let stad;
-  UNIVERSITIES.forEach(function(staden){
-    if (staden.id === universityID){
-      stad = staden.cityID 
+  CITIES.forEach(function(staden){
+    if (staden.universityID === name){
+      stad = staden.name 
     }
   });
  

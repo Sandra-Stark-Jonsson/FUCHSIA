@@ -27,12 +27,20 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 14vh;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.7;
+  margin: 0;
+  margin-bottom: 15vh;
 }
 
 h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #e7e7e7;
+  font-weight: bolder;
+  font-size: 5vh;
+  margin-bottom: 10vh;
 }
 #searchPrograms {
   width: 100%;
@@ -99,8 +107,14 @@ button:active {
 #programH1 {
   font-size: 5vh;
   margin-top: 0;
+  margin-bottom: 3vh;
   display: flex;
   justify-content: flex-start;
+}
+
+.programP {
+  margin: 0;
+  margin-bottom: 1vh;
 }
 
 #info {
@@ -110,10 +124,6 @@ button:active {
 #studentReview {
   height: 5vh;
   border: 1px solid black;
-}
-
-.programP {
-
 }
 
 #grades {
