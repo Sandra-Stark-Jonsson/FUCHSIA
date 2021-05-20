@@ -35,9 +35,7 @@ function DOMcities(bild, name, text, id) {
   </div>
   `;
 
-  // Nu är halva diven skapad. P.g.a att universiteten skapas via en funktion
-  // går det inte att använda innerHTML på samma sätt. Därför skapar vi alla divar progremmatiskt, vilket tar upp mer plats
-  // och ser mer förvirrande ut, men ger oss samtidigt större frihet.
+ 
   let extra = document.createElement('div')
   extra.classList.add('extra');
 
@@ -50,35 +48,31 @@ function DOMcities(bild, name, text, id) {
   let extraImage = document.createElement('img');
   extraImage.classList.add('extraImage');
   
-  // Här kör vi funktionen (se kommentarer om hur den fungerar) och cityUnis blir en div med alla universitet för just denna staden
-  // som vars en h2:a i en stor förälder.
+ 
   let cityUnis = createUniversity(id);
   console.log(cityUnis);
 
-  // Nu ska vi slå ihop våra divar och appenda det till container
-  // Vi jobbar "innifrån och ut" så de "yngsta barnen" kommer först. 
+
   gradeImage.append(grades, extraImage);
 
-  // gradeImage och cityUnis är syskon, så de appendas nu i extra
+
   extra.append(gradeImage, cityUnis);
 
-  // Nu vill vi lägga allting i container-diven, den "äldsta föräldern"
+
   container.append(extra);
 
   return container;
 }
 
 function createUniversity(id) {
-  //Skapa en förälderdiv och lägga till class.
+
   let uniDiv = document.createElement("div");
   uniDiv.classList.add("universities");
 
-// Filtrera arrayen med universitet, så ENDAST de med samma cityID som staden 
-// vi är på kommer med i vår nya array som heter universityCity.
+
   let universityCity = UNIVERSITIES.filter((element) => element.cityID === id);
 
-// För varje skola skapar vi sedan en ny div där vi lägger in namn och appendar den i föräldern. 
-// Har vi en skola körs loopen en gång, har vi två skolor körs det två gånger etc.
+
   universityCity.forEach((skola) => {
     let universityDiv = document.createElement("div");
     universityDiv.innerHTML = `
@@ -87,10 +81,9 @@ function createUniversity(id) {
 
     uniDiv.append(universityDiv);
   });
-  // Efter loopen är klar och alla divar är inne i vår förälder, skickar vi hela föräldern med alla sina barn
-  // till dit vi kallade på funktionen, aka i DOMcities-funktionen.
+
   return uniDiv;
-  // Det som _faktiskt_ skickas är en array som innehåller element som JS sedan kan arbeta med, vilket är pretty neat.
+ 
 }
 
 //sök på länder
@@ -114,4 +107,4 @@ document.querySelector("#buttonCountry").addEventListener("click", function () {
   });
 });
 
-//Clicka på länder
+
