@@ -112,13 +112,18 @@ button:active {
   justify-content: flex-start;
 }
 
+#skola {
+  font-size: 3vh;
+  font-weight: bold;
+}
+
 .programP {
   margin: 0;
-  margin-bottom: 1vh;
+  margin-bottom: 1.5vh;
+  font-size: 2.5vh;
 }
 
 #info {
-  border: 1px solid black;
 }
 
 #studentReview {

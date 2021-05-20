@@ -61,7 +61,7 @@ let stad;
         <h1 id="programH1">${name} - ${degree}</h1>
 
         <div id="info">
-          <p class="programP">${school}</p>
+          <p class="programP" id="skola">${school}</p>
           <p class="programP">${talk}</p>
           <p class="programP">${stad}</p>
         </div>  
