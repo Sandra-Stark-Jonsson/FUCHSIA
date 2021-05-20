@@ -82,7 +82,7 @@ universitet.
 setTimeout(() => {
     // Inne i en setTimeout Så att konstanten DB deklareras
     // innan vi loggar den.
-    console.log(DB);
+    //console.log(DB);
 }, 1);
 
 
@@ -19663,7 +19663,6 @@ const DB = {
     LEVELS,
     CLUBS,
     ENTERTAINMENT_PLACES,
-    COMMENTS_PROGRAMME,
     COMMENTS_CITY
 };
 
