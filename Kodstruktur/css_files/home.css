@@ -71,6 +71,18 @@ p {
   margin-top: 3vh;
   border: none;
   cursor: pointer;
+  box-shadow: 3px 3px #97a8a7;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #a3d2c2;
+}
+
+#button:active {
+  background-color: #feca7d;
 }
 
 #imageContact {
@@ -134,13 +146,25 @@ img {
   color: #212121;
   height: 40px;
   width: 130px;
-  font-size: small;
   border-radius: 10px 10px 10px 10px;
   margin-top: 3vh;
   border: none;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
   font-size: medium;
   cursor: pointer;
+  box-shadow: 3px 3px rgba(173, 172, 172, 0.8);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+
+.buttonLinks:hover {
+  cursor: pointer;
+  background-color: #feca7d;
+}
+
+.buttonLinks:active {
+  background-color: #a3d2c2;
 }
 
 /* nav */

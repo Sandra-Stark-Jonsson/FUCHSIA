@@ -71,7 +71,44 @@ p {
   margin-top: 3vh;
   border: none;
   cursor: pointer;
+  box-shadow: 3px 3px #97a8a7;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
+
+#button:hover {
+  cursor: pointer;
+  background-color: #a3d2c2;
+}
+
+#button:active {
+  background-color: #feca7d;
+}
+
+/*#button {
+  background-color: #212121;
+  color: white;
+  height: 40px;
+  width: 130px;
+  font-size: small;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 3vh;
+  border: none;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #a3d2c2;
+  color: #212121;
+}
+
+button:active {
+  background-color: #feca7d;
+}*/
 
 /*#contactInfo {
   display: flex;
