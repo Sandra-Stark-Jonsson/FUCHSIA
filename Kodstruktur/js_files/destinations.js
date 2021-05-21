@@ -136,18 +136,18 @@ function DOMcountries(bild, name, countryID) {
 function createCities(idCountry) {
   let parent = document.createElement("div");
   parent.classList.add("citieparent");
-  
+
   CITIES.forEach(function (city) {
     console.log(idCountry);
     if (city.countryID === idCountry) {
-      
+
       let cityelement = document.createElement("div");
       cityelement.classList.add("citydDiv");
-      
+
       let cityh2 = document.createElement("h2");
       cityh2.innerHTML = city.name;
       cityelement.append(cityh2);
-      
+
       let citytext = document.createElement("h2");
       citytext.innerHTML = city.text;
       cityelement.append(citytext);
@@ -155,9 +155,10 @@ function createCities(idCountry) {
       let cityBild = document.createElement("h2");
       cityBild.innerHTML = city.imagesNormal[0];
       cityelement.append(cityBild);
-      
 
-      
+
+
+
 
 
       UNIVERSITIES.forEach(function (uni) {
@@ -177,6 +178,10 @@ function createCities(idCountry) {
   return parent;
 
 }
+
+
+
+
 
 
 // Försöka räkna ut ett snitt 

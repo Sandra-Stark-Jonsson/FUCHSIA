@@ -9,48 +9,49 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
     } else {
       return false;
     }
+
   });
-  
+
   console.log(filterPrograms);
   filterPrograms.forEach(function (program) {
     let list = document.querySelector("#listContainer");
     list.append(DOMprograms(program.name, program.universityID, program.level, program.language, program.entryGrades));
-  
+
   });
 });
 
 
 
-function DOMprograms(name, universityID, level, language, entryGrades, id, cityID){
+function DOMprograms(name, universityID, level, language, entryGrades) {
   let container = document.createElement("div");
   container.classList.add("program");
 
-let degree;
-  if (level === 0){
+  let degree;
+  if (level === 0) {
     degree = ``
-  } else if (level > 0){
-    degree = LEVELS[level-1]
+  } else if (level > 0) {
+    degree = LEVELS[level - 1]
   }
 
-let school;
-  UNIVERSITIES.forEach(function(skola){
-    if (skola.id === universityID){
+  let school;
+  UNIVERSITIES.forEach(function (skola) {
+    if (skola.id === universityID) {
       school = skola.name
     }
   });
-  
-let talk;
-  LANGUAGES.forEach(function(sprak){
-    if (sprak.id === language){
+
+  let talk;
+  LANGUAGES.forEach(function (sprak) {
+    if (sprak.id === language) {
       talk = sprak.name
     }
-  }); 
+  });
 
-let stad;
-  CITIES.forEach(function(staden){
-    if (staden.cityID === id){
+  let stad;
+  CITIES.forEach(function (staden) {
+    if (staden.universityID === name) {
       stad = staden.name
-    } 
+    }
   });
 
   container.innerHTML = `
@@ -84,3 +85,5 @@ let stad;
   `;
   return container;
 }
+
+
