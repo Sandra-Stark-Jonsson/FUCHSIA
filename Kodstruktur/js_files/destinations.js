@@ -112,7 +112,8 @@ function DOMcountries(bild, name, countryID) {
 
   box.innerHTML = `
   <div class="startDiv">
-  <img class="startImage" src = 'Images/${bild}'>`
+  <img class="startImage" src = 'Images/${bild}'> 
+  `
 
 
   let cityContainer = document.createElement("div");
@@ -121,8 +122,6 @@ function DOMcountries(bild, name, countryID) {
 
 
   let citydiv = createCities(countryID);
-
-
 
 
   let button = document.createElement("button");
@@ -156,6 +155,7 @@ function createCities(idCountry) {
       let cityBild = document.createElement("h2");
       cityBild.innerHTML = city.imagesNormal[0];
       cityelement.append(cityBild);
+
 
 
 
