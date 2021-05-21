@@ -157,7 +157,7 @@ function createCities(idCountry) {
       cityBild.innerHTML = city.imagesNormal[0];
       cityelement.append(cityBild);
 
-      
+
 
 
 
@@ -178,6 +178,10 @@ function createCities(idCountry) {
   return parent;
 
 }
+
+
+
+
 
 
 // Försöka räkna ut ett snitt 
