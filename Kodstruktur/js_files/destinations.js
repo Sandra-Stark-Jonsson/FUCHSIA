@@ -153,6 +153,12 @@ function createCities(idCountry) {
       citytext.innerHTML = city.text;
       cityelement.append(citytext);
 
+      let cityBild = document.createElement("h2");
+      cityBild.innerHTML = city.imagesNormal[0];
+      cityelement.append(cityBild);
+
+      
+
 
 
       UNIVERSITIES.forEach(function (uni) {
