@@ -21,7 +21,7 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
 
 
 
-function DOMprograms(name, universityID, level, language, entryGrades){
+function DOMprograms(name, universityID, level, language, entryGrades, id, cityID){
   let container = document.createElement("div");
   container.classList.add("program");
 
@@ -48,11 +48,10 @@ let talk;
 
 let stad;
   CITIES.forEach(function(staden){
-    if (staden.universityID === name){
-      stad = staden.name 
-    }
+    if (staden.cityID === id){
+      stad = staden.name
+    } 
   });
- 
 
   container.innerHTML = `
   <div class="startdiv">
