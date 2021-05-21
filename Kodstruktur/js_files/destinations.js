@@ -125,7 +125,7 @@ function DOMcountries(bild, name, countryID) {
 
 
   let button = document.createElement("button");
-  button.classList.add("readMore");
+  button.classList.add("readMoreButton");
 
   cityContainer.append(citydiv, button);
 
@@ -152,7 +152,7 @@ function createCities(idCountry) {
       citytext.innerHTML = city.text;
       cityelement.append(citytext);
 
-      let cityBild = document.createElement("div");
+      let cityBild = document.createElement("h2");
       cityBild.innerHTML = city.imagesNormal[0];
       cityelement.append(cityBild);
       
