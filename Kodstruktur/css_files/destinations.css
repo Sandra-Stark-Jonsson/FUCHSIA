@@ -116,7 +116,7 @@ button:active {
   width: 100vw;
   background-color: #b2bcab;
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
 }
 
 .startImage {
@@ -127,8 +127,8 @@ button:active {
 
 .citieparent {
   width: 100vw;
- 
-  
+  margin-top: 10vh;
+  margin-bottom: 20vh;
 }
 
 .cityContainer {
