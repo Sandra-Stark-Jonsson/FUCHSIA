@@ -21,10 +21,22 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
 });
 
 
-
-function DOMprograms(name, universityID, level, language, entryGrades) {
+function DOMprograms(data, city, name, universityID, level, language, entryGrades) {
   let container = document.createElement("div");
   container.classList.add("program");
+  // TEST försöker hitta land och stad
+  const city = CITIES.find(cities => data.cityID === cities.id);
+  const c = COUNTRIES.find(function (c) {
+    if (city.countryID === c.id) {
+      let b = CITIES.find(function (city) {
+        if (data.cityID === city.id) {
+          return city;
+        }
+      });
+      return b;
+    }
+
+  });
 
   let degree;
   if (level === 0) {
@@ -61,9 +73,10 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
         <h1 id="programH1">${name} - ${degree}</h1>
 
         <div id="info">
-          <p class="programP" id="skola">${school}</p>
-          <p class="programP">${talk}</p>
-          <p class="programP">${stad}</p>
+          <p class="programP" id="skola"> Skola: ${school}</p>
+          <p class="programP"> Språk: ${talk}</p>
+          <p class="programP"> Land: ${c.name}</p>
+          <p class="programP"> Stad: ${city.name}</p>
         </div>  
         <div id="studentReview"></div>
       </div>
@@ -85,5 +98,3 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
   `;
   return container;
 }
-
-
