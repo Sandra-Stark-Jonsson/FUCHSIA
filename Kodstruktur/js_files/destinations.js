@@ -86,6 +86,8 @@ function createUniversity(id) {
 
 }
 
+
+
 //sök på länder
 
 document.querySelector("#buttonCountry").addEventListener("click", function () {
@@ -146,7 +148,7 @@ function createCities(idCountry) {
       
       let cityBild = document.createElement("div");
       cityBild.innerHTML = `
-      <img class="startImage" src = 'Images/${DOMcountries(bild.idCountry)}'> 
+      <img class="startImage" src = 'Images/${bild}'> 
       `;
       cityelement.append(cityBild);
       
@@ -176,25 +178,24 @@ function createCities(idCountry) {
 
 
 
-      /*UNIVERSITIES.forEach(function (uni) {
-        if (uni.cityID === city.id) {
-          let pElement = document.createElement("p");
-          pElement.innerHTML = uni.name;
-          cityelement.append(pElement);
-
-        }
-      })
-      */
       parent.append(cityelement);
     }
+    
+    
+    /*UNIVERSITIES.forEach(function (uni) {
+      if (uni.cityID === city.id) {
+        let pElement = document.createElement("p");
+        pElement.innerHTML = uni.name;
+        cityelement.append(pElement);
 
-
+      }
+    })
+    */
   })
 
   return parent;
 
 }
-
 
 
 

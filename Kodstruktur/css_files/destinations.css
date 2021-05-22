@@ -171,3 +171,11 @@ button:active {
   max-width: 50vw;
   overflow: scroll;
 }
+
+
+.extra{
+  height: 10vh;
+  width: 100vw;
+  background-color: #b2bcab;
+
+  }
