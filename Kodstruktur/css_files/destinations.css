@@ -115,6 +115,8 @@ button:active {
   height: 70vh;
   width: 100vw;
   background-color: #b2bcab;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 
 .startImage {
@@ -125,6 +127,8 @@ button:active {
 
 .citieparent {
   width: 100vw;
+ 
+  
 }
 
 .cityContainer {
@@ -136,18 +140,18 @@ button:active {
   align-items: flex-start;
 }
 
+
 .citydDiv {
-  width: 100%;
+  width: 100vw;
   height: 70vh;
   background-color: #949c8e;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+  
+ 
+  
+  
 }
 
-#cityH1 {
+.cityH1 {
   font-size: 5.5vh;
   margin-bottom: 3vh;
 }

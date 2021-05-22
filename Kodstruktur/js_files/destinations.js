@@ -28,8 +28,8 @@ function DOMcities(bild, name, text, id) {
   <div class="startDiv">
     <img class="startImage" src = 'Images/${bild}'>
     <div class= "cityContainer">
-        <h1 id="cityH1">${name}</h1>
-        <p id="cityP">${text}</p>
+        <h1 class="cityH1">${name}</h1>
+        <p class="cityP">${text}</p>
         <button class="readMoreButton">Läs Mer</button>
     </div>
   </div>
@@ -101,12 +101,12 @@ document.querySelector("#buttonCountry").addEventListener("click", function () {
   console.log(filterCountries);
   filterCountries.forEach(function (country) {
     let list = document.querySelector("#listContainer");
-    list.append(DOMcountries(country.imagesNormal[0], country.name, country.id));
+    list.append(DOMcountries(country.imagesNormal[0], country.id));
   });
 });
 
 
-function DOMcountries(bild, name, countryID) {
+function DOMcountries(bild, countryID) {
   let box = document.createElement("div");
   box.classList.add("countries");
 
@@ -116,52 +116,67 @@ function DOMcountries(bild, name, countryID) {
   `
 
 
-  let cityContainer = document.createElement("div");
-  cityContainer.classList.add("cityContainer");
-
-
-
+  let listContainer = document.createElement("div");
+  listContainer.classList.add("listContainer");
+  
+  
+  
   let citydiv = createCities(countryID);
-
-
-  let button = document.createElement("button");
-  button.classList.add("readMoreButton");
-
-  cityContainer.append(citydiv, button);
-
-  return cityContainer;
-
+  
+  
+  
+  listContainer.append(citydiv);
+  
+  return listContainer;
+  
 }
+
 
 function createCities(idCountry) {
   let parent = document.createElement("div");
   parent.classList.add("citieparent");
-
-  CITIES.forEach(function (city) {
+  
+  CITIES.forEach(function (city, bild) {
     console.log(idCountry);
     if (city.countryID === idCountry) {
-
+      
+      
       let cityelement = document.createElement("div");
-      cityelement.classList.add("citydDiv");
-
-      let cityh2 = document.createElement("h2");
-      cityh2.innerHTML = city.name;
-      cityelement.append(cityh2);
-
-      let citytext = document.createElement("h2");
-      citytext.innerHTML = city.text;
-      cityelement.append(citytext);
-
-      let cityBild = document.createElement("h2");
-      cityBild.innerHTML = city.imagesNormal[0];
+      cityelement.classList.add("startDiv");
+      
+      let cityBild = document.createElement("div");
+      cityBild.innerHTML = `
+      <img class="startImage" src = 'Images/${DOMcountries(bild.idCountry)}'> 
+      `;
       cityelement.append(cityBild);
+      
+      let cityContainer = document.createElement("div");
+      cityContainer.classList.add("cityContainer");
+      cityelement.append(cityContainer);
+      
+      let cityH1 = document.createElement("h1");
+      cityH1.classList.add("cityH1");
+      cityH1.innerHTML = city.name;
+      cityContainer.append(cityH1);
+      
+      let cityP = document.createElement("p");
+      cityP.classList.add("cityP");
+      cityP.innerHTML = city.text;
+      cityContainer.append(cityP);
+      
+      
+      let button = document.createElement("button");
+      button.classList.add("readMoreButton");
+      button.innerHTML = ` 
+      <p>Läs Mer</p>
+      `;
+      cityContainer.append(button);
 
 
 
 
 
-
-      UNIVERSITIES.forEach(function (uni) {
+      /*UNIVERSITIES.forEach(function (uni) {
         if (uni.cityID === city.id) {
           let pElement = document.createElement("p");
           pElement.innerHTML = uni.name;
@@ -169,6 +184,7 @@ function createCities(idCountry) {
 
         }
       })
+      */
       parent.append(cityelement);
     }
 
