@@ -184,35 +184,55 @@ nav > a {
 /* studentkommentarer */
 #homeStudents {
   box-sizing: border-box;
-  width: 80%;
-  margin: auto;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   margin-top: 10vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 /*karusellen*/
 
 .carousel {
   background: #f2f2f2;
-  display: flex;
   height: 25vh;
   width: 100vw;
-  justify-content: center;
-  align-items: center;
-}
 
+}
 .carousel-cell {
   width: 66%;
   height: 25vh;
   margin: 10px;
   background: #949c8e;
   border-radius: 5px;
-  counter-increment: carousel-cell;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
+ 
+}
+
+.carousel-cell > h1{
+  position: absolute;
+  top: 109vh;
+  font-size: 27px;  
+  padding: 4px;
+  
+}
+.carousel-cell > p{
+  position: relative;
+  margin: 15px;
+  font-style: italic;
+}
+
+#homeStudents > h1{
+  position: absolute;
+  top: 97vh;
+  margin-bottom: 1vh;
+  font-size: 6vh;
+  font-weight: bolder;
 }
 
 /* buttons karusellen */
