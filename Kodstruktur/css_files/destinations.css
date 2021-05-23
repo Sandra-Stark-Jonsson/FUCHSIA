@@ -228,3 +228,9 @@ input {
   
 }
 
+#adSquare{
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  margin-top: 45px;
+}

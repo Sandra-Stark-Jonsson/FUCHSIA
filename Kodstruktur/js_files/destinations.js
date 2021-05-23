@@ -37,6 +37,7 @@ function DOMcities(bild, name, text, id) {
   </div>
     <img class="startImage" src = 'Images/${bild}'>
   </div>
+  <img id="adLong" src="Annonser/annons_horizontell.jpg" alt="annons" />
   `;
 
 
@@ -167,13 +168,15 @@ function createCities(idCountry) {
 
       let button = document.createElement("element");
       button.innerHTML = ` 
-      <button class="readMoreButton">Läs Mer</button>
+      <button class="readMoreButton">Läs Mer</button><br>
+      <img id="adSquare" src="Annonser/annons_kvadratisk.jpg" alt="annons" />
       `;
       cityContainer.append(button);
 
       let cityBild = document.createElement("div");
       cityBild.innerHTML = `
       <img class="startImage" src = 'Images/${city.imagesNormal[0]}'> 
+  
       `;
       cityelement.append(cityBild);
 
