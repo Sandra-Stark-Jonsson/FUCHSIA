@@ -60,6 +60,8 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
     }
   });
 
+  
+
   container.innerHTML = `
   <div class="startdiv">
     <div class="programContainer">

@@ -122,7 +122,9 @@ button:active {
 .startImage {
   height: 50vh;
   width: 45vw;
-  margin-left: 10vw;
+  
+  margin-right: 10vw;
+
 }
 
 .citieparent {
@@ -174,9 +176,50 @@ button:active {
 }
 
 
+
 .extra{
-  height: 10vh;
+  height: 100vh;
   width: 100vw;
   background-color: #b2bcab;
+  display: flex;
+  /*display: none;*/
 
-  }
+}
+
+.readMoreButton:active  /* body > div:nth-child(3) > div > div:last-child */{
+   display: visible;
+   
+}
+
+.gradeImage{
+  width: 40vw;
+  height: 60vh;
+  margin-left: 10vw;
+}
+
+.grades{
+  background-color: white;
+  width: 40vw;
+  height: 20vh;
+  margin-bottom: 5vh;
+}
+
+.extraImage{
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+}
+
+.universities{
+  margin-left: 12vw;
+  margin-right: 10vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  margin-bottom: 25vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
