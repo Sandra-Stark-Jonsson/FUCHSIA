@@ -32,7 +32,9 @@ function DOMcities(bild, name, text, id) {
     <div class= "cityContainer">
         <h1 class="cityH1">${name}</h1>
         <p class="cityP">${text}</p>
+        <element>
         <button class="readMoreButton">Läs Mer</button>
+        </element>
     </div>
   </div>
   `;
@@ -169,10 +171,9 @@ function createCities(idCountry) {
       cityContainer.append(cityP);
 
 
-      let button = document.createElement("button");
-      button.classList.add("readMoreButton");
+      let button = document.createElement("element");
       button.innerHTML = ` 
-      <p>Läs Mer</p>
+      <button class="readMoreButton">Läs Mer</button>
       `;
       cityContainer.append(button);
 
