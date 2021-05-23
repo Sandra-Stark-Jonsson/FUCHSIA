@@ -222,9 +222,16 @@ nav > a {
   
 }
 .carousel-cell > p{
-  position: relative;
-  margin: 15px;
-  font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    margin-top: 4vh;
+   font-style: italic;
+    overflow-y: scroll;
+   margin-right: 10px;
+   margin-left: 10px;
 }
 
 #homeStudents > h1{

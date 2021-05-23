@@ -12,7 +12,7 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
 
   });
 
-  console.log(filterPrograms);
+  document.querySelector("#program").value = "";
   filterPrograms.forEach(function (program) {
     let list = document.querySelector("#listContainer");
     list.append(DOMprograms(program.name, program.universityID, program.level, program.language, program.entryGrades));
@@ -65,9 +65,18 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
   //   return Math.floor(Math.random() * (max - min + 1)) + min;
   // }
 
-  
+  //slumpmässig kommentar
+  function randomComment() {
+    let number = randomNumber(0, PROGRAMMES.length);
+    let randomProgram = PROGRAMMES[number];
+    let programName = randomProgram.name;
+    let programId = randomProgram.id;
+    //filtrera så att alla kommentarer är för samma program
+    let commentProgram = COMMENTS_PROGRAMME.filter((comment) => {
+      return comment.programmeID == programId;
+    })
 
-  container.innerHTML = `
+    container.innerHTML = `
   <div class="startdiv">
     <div class="programContainer">
       <div class="allInfo">
