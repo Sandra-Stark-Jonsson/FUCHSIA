@@ -1,50 +1,55 @@
-//karusellen
-const carouselSlide = document.querySelector(".carousel");
-const carouselCell = document.querySelectorAll(".carousel .carousel-cell");
 
-//the buttons
-const prevButton = document.querySelector(".button-prev");
-const nextButton = document.querySelector(".button-next");
+//dekladera homeStudents diven
+let studentBox = document.querySelector("#homeStudents");
+//slupmässig nummer
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-// //counter
-let counter = 0;
-const size = carouselCell[2].clientWidth;
+//slumpmässig kommentar
+function randomComment() {
+  let number = randomNumber(0, PROGRAMMES.length);
+  let randomProgram = PROGRAMMES[number];
+  let programName = randomProgram.name;
+  let programId = randomProgram.id;
+  //filtrera så att alla kommentarer är för samma program
+  let commentProgram = COMMENTS_PROGRAMME.filter((comment) => {
+    return comment.programmeID == programId;
+  })
+  //skapa en headline och appenda
+  let headline = document.createElement("h1");
+  headline.innerHTML = programName;
+  studentBox.append(headline);
+  //slumpa fram upp till 5 divar och append
+  if (commentProgram.length < 5) {
 
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    for (let i = 0; i < commentProgram.length; i++) {
+      let newNumber = randomNumber(0, commentProgram.length);
+      let newComment = commentProgram[newNumber];
+      let newDiv = document.createElement("div");
+      newDiv.classList.add("carousel-cell");
+      newDiv.innerHTML = `
+    <h1>${newComment.alias}</h1>
+    <p>${newComment.text}</p>
+    `
+      studentBox.append(newDiv);
+    }
 
-// divar 
-let makediv = document.createElement("div");
+  } else {
+    for (let i = 0; i < 5; i++) {
+      let newNumber = randomNumber(0, commentProgram.length);
+      let newComment = commentProgram[newNumber];
+      let newDiv = document.createElement("div");
+      newDiv.classList.add("carousel-cell");
+      newDiv.innerHTML = `
+      <h1>${newComment.alias}</h1>
+      <p>${newComment.text}</p>
+      `
+      studentBox.append(newDiv);
+    }
 
-
-//Button Event listners
-nextButton.addEventListener("click", function () {
-  //bug preventor
-  if (counter >= carouselCell.length - 1) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter++;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-prevButton.addEventListener("click", function () {
-  //bug preventor
-  if (counter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4 ease-in-out";
-  counter--;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-//Reset the transition between cells prev button
-carouselSlide.addEventListener('transitionend', function () {
-  if (carouselCell[counter].id === "sixthCell") {
-    //carouselSlide.style.transition = "none";
-    counter = carouselCell.length - 0;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
-  else if (carouselCell[counter].id === "firstCell") {
-    //carouselSlide.style.transition = "none";
-    counter = carouselCell.length - counter;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  }
-});
 
+}
 
+randomComment();
