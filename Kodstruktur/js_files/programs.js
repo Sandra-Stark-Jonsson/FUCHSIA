@@ -143,4 +143,3 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
   }
 
   randomComment();
-}
