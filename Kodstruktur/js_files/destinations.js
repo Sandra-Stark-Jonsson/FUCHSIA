@@ -51,14 +51,19 @@ function DOMcities(bild, name, text, id) {
 
   let extraImage = document.createElement('img');
   extraImage.classList.add('extraImage');
-  
- 
- /* let extraCloseButton = document.createElement("element");
-  extraCloseButton.innerHTML = `
-  <button class="readMoreButton">Stäng</button>
-  `;
-  grades.append(extraCloseButton);
-*/
+
+
+
+
+
+
+
+  /* let extraCloseButton = document.createElement("element");
+   extraCloseButton.innerHTML = `
+   <button class="readMoreButton">Stäng</button>
+   `;
+   grades.append(extraCloseButton);
+ */
   let cityUnis = createUniversity(id);
   console.log(cityUnis);
 
@@ -156,28 +161,28 @@ function createCities(idCountry) {
       let cityelement = document.createElement("div");
       cityelement.classList.add("startDiv");
 
-      
+
       let cityContainer = document.createElement("div");
       cityContainer.classList.add("cityContainer");
       cityelement.append(cityContainer);
-      
+
       let cityH1 = document.createElement("h1");
       cityH1.classList.add("cityH1");
       cityH1.innerHTML = city.name;
       cityContainer.append(cityH1);
-      
+
       let cityP = document.createElement("p");
       cityP.classList.add("cityP");
       cityP.innerHTML = city.text;
       cityContainer.append(cityP);
-      
-      
+
+
       let button = document.createElement("element");
       button.innerHTML = ` 
       <button class="readMoreButton">Läs Mer</button>
       `;
       cityContainer.append(button);
-      
+
       let cityBild = document.createElement("div");
       cityBild.innerHTML = `
       <img class="startImage" src = 'Images/${city.imagesNormal[0]}'> 

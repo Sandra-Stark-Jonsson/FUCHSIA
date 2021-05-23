@@ -65,7 +65,7 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
   //   return Math.floor(Math.random() * (max - min + 1)) + min;
   // }
 
-  
+
 
   container.innerHTML = `
   <div class="startdiv">
@@ -94,53 +94,51 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
       </div>
     </div>
     <div class="students">`
-    function randomNumber(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    function randomComment() {
-      let number = randomNumber(0, PROGRAMMES.length);
-      let randomProgram = PROGRAMMES[number];
-      let programName = randomProgram.name;
-      let programId = randomProgram.id;
-      //filtrera så att alla kommentarer är för samma program
-      let commentProgram = COMMENTS_PROGRAMME.filter((comment) => {
-        return comment.programmeID == programId;
-      })
-      if (commentProgram.length < 3) {
+  function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  function randomComment() {
+    let number = randomNumber(0, PROGRAMMES.length);
+    let randomProgram = PROGRAMMES[number];
+    let programName = randomProgram.name;
+    let programId = randomProgram.id;
+    //filtrera så att alla kommentarer är för samma program
+    let commentProgram = COMMENTS_PROGRAMME.filter((comment) => {
+      return comment.programmeID == programId;
+    })
+    if (commentProgram.length < 3) {
 
-        for (let i = 0; i < commentProgram.length; i++) {
-          let newNumber = randomNumber(0, commentProgram.length);
-          let newComment = commentProgram[newNumber];
-          let newDiv = document.createElement("div");
-          newDiv.classList.add("carousel-cell");
-          newDiv.innerHTML = `
+      for (let i = 0; i < commentProgram.length; i++) {
+        let newNumber = randomNumber(0, commentProgram.length);
+        let newComment = commentProgram[newNumber];
+        let newDiv = document.createElement("div");
+        newDiv.classList.add("carousel-cell");
+        newDiv.innerHTML = `
+    <h1>${newComment.alias}</h1>
+    <p>${newComment.text}</p>
+    `
+        listContainer.append(newDiv);
+      }
+
+    } else {
+      for (let i = 0; i < 3; i++) {
+        let newNumber = randomNumber(0, commentProgram.length);
+        let newComment = commentProgram[newNumber];
+        let newDiv = document.createElement("div");
+        newDiv.classList.add("carousel-cell");
+        newDiv.innerHTML = `
       <h1>${newComment.alias}</h1>
       <p>${newComment.text}</p>
       `
-          listContainer.append(newDiv);
-        }
+        listContainer.append(newDiv);
+      }
+    } `
+  </div>
+</div>`
+      ;
 
-      } else {
-        for (let i = 0; i < 3; i++) {
-          let newNumber = randomNumber(0, commentProgram.length);
-          let newComment = commentProgram[newNumber];
-          let newDiv = document.createElement("div");
-          newDiv.classList.add("carousel-cell");
-          newDiv.innerHTML = `
-        <h1>${newComment.alias}</h1>
-        <p>${newComment.text}</p>
-        `
-          listContainer.append(newDiv);
-        }
-      } `
-    </div>
-  </div>`
-        ;
+    return container;
 
-      return container;
-
-    }
   }
-
-  randomComment();
 }
+randomComment();

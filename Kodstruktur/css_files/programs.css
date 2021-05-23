@@ -149,3 +149,7 @@ button:active {
 .students {
   border: 1px solid black;
 }
+
+input {
+  font-family: "Open Sans", sans-serif;
+}
