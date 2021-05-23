@@ -36,7 +36,7 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
   let school;
   UNIVERSITIES.forEach(function (skola) {
     if (skola.id === universityID) {
-      school = skola.name
+      school = skola.name;
     }
   });
 
@@ -48,9 +48,15 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
   });
 
   let stad;
-  CITIES.forEach(function (staden) {
-    if (staden.universityID === name) {
-      stad = staden.name
+  let findCity;
+  UNIVERSITIES.forEach(function (skola) {
+    if (skola.id === universityID) {
+      findCity = skola.cityID;
+      CITIES.forEach(function (city) {
+        if (city.id === findCity) {
+          stad = city.name;
+        }
+      })
     }
   });
 

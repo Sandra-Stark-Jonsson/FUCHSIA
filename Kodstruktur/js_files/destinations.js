@@ -10,12 +10,14 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
       return false;
     }
   });
-  console.log(filterCities);
+  document.querySelector("#destinationsCity").value = "";
   filterCities.forEach(function (city) {
     let list = document.querySelector("#listContainer");
     list.append(DOMcities(city.imagesNormal[0], city.name, city.text, city.id));
   });
 });
+
+
 
 // console.log(COUNTRIES);
 
@@ -120,53 +122,53 @@ function DOMcountries(bild, countryID) {
 
   let listContainer = document.createElement("div");
   listContainer.classList.add("listContainer");
-  
-  
-  
+
+
+
   let citydiv = createCities(countryID);
-  
-  
-  
+
+
+
   listContainer.append(citydiv);
-  
+
   return listContainer;
-  
+
 }
 
 
 function createCities(idCountry) {
   let parent = document.createElement("div");
   parent.classList.add("citieparent");
-  
-  CITIES.forEach(function (city, bild) {
+
+  CITIES.forEach(function (city) {
     console.log(idCountry);
     if (city.countryID === idCountry) {
-      
-      
+
+
       let cityelement = document.createElement("div");
       cityelement.classList.add("startDiv");
-      
+
       let cityBild = document.createElement("div");
       cityBild.innerHTML = `
-      <img class="startImage" src = 'Images/${bild}'> 
+      <img class="startImage" src = 'Images/${city.imagesNormal[0]}'> 
       `;
       cityelement.append(cityBild);
-      
+
       let cityContainer = document.createElement("div");
       cityContainer.classList.add("cityContainer");
       cityelement.append(cityContainer);
-      
+
       let cityH1 = document.createElement("h1");
       cityH1.classList.add("cityH1");
       cityH1.innerHTML = city.name;
       cityContainer.append(cityH1);
-      
+
       let cityP = document.createElement("p");
       cityP.classList.add("cityP");
       cityP.innerHTML = city.text;
       cityContainer.append(cityP);
-      
-      
+
+
       let button = document.createElement("button");
       button.classList.add("readMoreButton");
       button.innerHTML = ` 
@@ -180,8 +182,8 @@ function createCities(idCountry) {
 
       parent.append(cityelement);
     }
-    
-    
+
+
     /*UNIVERSITIES.forEach(function (uni) {
       if (uni.cityID === city.id) {
         let pElement = document.createElement("p");
