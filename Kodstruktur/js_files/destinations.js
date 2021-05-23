@@ -123,24 +123,14 @@ function DOMcountries(bild, countryID) {
   let box = document.createElement("div");
   box.classList.add("countries");
 
-  box.innerHTML = `
-  <div class="startDiv">
-  <img class="startImage" src = 'Images/${bild}'> 
-  `
-
-
-  let listContainer = document.createElement("div");
-  listContainer.classList.add("listContainer");
-
-
+  box.innerHTML = ``;
 
   let citydiv = createCities(countryID);
 
 
+  box.append(citydiv);
 
-  listContainer.append(citydiv);
-
-  return listContainer;
+  return box;
 
 }
 
@@ -148,6 +138,7 @@ function DOMcountries(bild, countryID) {
 function createCities(idCountry) {
   let parent = document.createElement("div");
   parent.classList.add("citieparent");
+
 
   CITIES.forEach(function (city) {
     console.log(idCountry);
@@ -159,6 +150,7 @@ function createCities(idCountry) {
 
 
       let cityContainer = document.createElement("div");
+
       cityContainer.classList.add("cityContainer");
       cityelement.append(cityContainer);
 
@@ -186,24 +178,43 @@ function createCities(idCountry) {
       cityelement.append(cityBild);
 
 
-
-
       parent.append(cityelement);
-    }
 
+      let extra2 = document.createElement('div')
+      extra2.classList.add('extra');
+      parent.append(extra2);
+
+      let gradeImage2 = document.createElement('div');
+      gradeImage2.classList.add('gradeImage');
+      extra2.append(gradeImage2);
+
+      let grades2 = document.createElement('div');
+      grades2.classList.add('grades');
+      extra2.append(grades2);
+
+      let extraImage2 = document.createElement('img');
+      extraImage2.classList.add('extraImage');
+      extra2.append(extraImage2);
+
+    }
 
     /*UNIVERSITIES.forEach(function (uni) {
       if (uni.cityID === city.id) {
         let pElement = document.createElement("p");
         pElement.innerHTML = uni.name;
         cityelement.append(pElement);
-
+        
       }
     })
     */
+
+
   })
 
+
+
   return parent;
+
 
 }
 

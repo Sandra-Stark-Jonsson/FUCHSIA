@@ -123,9 +123,9 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
           let newDiv = document.createElement("div");
           newDiv.classList.add("carousel-cell");
           newDiv.innerHTML = `
-      <h1>${newComment.alias}</h1>
-      <p>${newComment.text}</p>
-      `
+    <h1>${newComment.alias}</h1>
+    <p>${newComment.text}</p>
+    `
           listContainer.append(newDiv);
         }
 
@@ -136,20 +136,18 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
           let newDiv = document.createElement("div");
           newDiv.classList.add("carousel-cell");
           newDiv.innerHTML = `
-        <h1>${newComment.alias}</h1>
-        <p>${newComment.text}</p>
-        `
+      <h1>${newComment.alias}</h1>
+      <p>${newComment.text}</p>
+      `
           listContainer.append(newDiv);
         }
       } `
-    </div>
-  </div>`
+  </div>
+</div>`
         ;
 
       return container;
 
     }
   }
-
   randomComment();
-}
