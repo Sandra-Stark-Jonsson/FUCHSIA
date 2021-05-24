@@ -178,12 +178,13 @@ button:active {
 
 
 .extra{
-  height: 100vh;
+  height: 130vh;
   width: 100vw;
   background-color: #b2bcab;
   display: flex;
   /*display: none;*/
-
+  padding-top: 10vh;
+  
 }
 
 .readMoreButton:active  /* body > div:nth-child(3) > div > div:last-child */{
@@ -206,8 +207,9 @@ button:active {
 
 .extraImage{
   height: 50vh;
-  width: 50vw;
-  background-color: white;
+  width: 45vw;
+  
+  
 }
 
 .universities{
@@ -233,4 +235,20 @@ input {
   width: 200px;
   position: absolute;
   margin-top: 45px;
+}
+
+.extraCloseButton{
+  margin-left: 35vw;
+  margin-top: 40vh;
+  height: 50px;
+  width: 100px;
+  background-color: #212121;
+  color: #e7e7e7;
+  border-radius: 1vh;
+  box-shadow: 3px 3px #97a8a7;
+  font-size: 15px;
+}
+
+#adLong{
+  
 }

@@ -13,15 +13,12 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
   document.querySelector("#destinationsCity").value = "";
   filterCities.forEach(function (city) {
     let list = document.querySelector("#listContainer");
-    list.append(DOMcities(city.imagesNormal[0], city.name, city.text, city.id));
+    list.append(DOMcities(city.imagesNormal[0], city.imagesNormal[1], city.name, city.text, city.id));
   });
 });
 
 
-
-// console.log(COUNTRIES);
-
-function DOMcities(bild, name, text, id) {
+function DOMcities(bild, bild2, name, text, id) {
   let container = document.createElement("div");
   container.classList.add("cities");
 
@@ -50,16 +47,13 @@ function DOMcities(bild, name, text, id) {
   let grades = document.createElement('div');
   grades.classList.add('grades');
 
-  let extraImage = document.createElement('img');
+  let extraImage = document.createElement('div');
   extraImage.classList.add('extraImage');
+  extraImage.innerHTML = `
+  <img class="extraImage" src = 'Images/${bild2}'> 
+  <button class="extraCloseButton">Stäng</button>
+  `;
 
-
-  /* let extraCloseButton = document.createElement("element");
-   extraCloseButton.innerHTML = `
-   <button class="readMoreButton">Stäng</button>
-   `;
-   grades.append(extraCloseButton);
- */
   let cityUnis = createUniversity(id);
   console.log(cityUnis);
 
@@ -96,6 +90,8 @@ function createUniversity(id) {
   return uniDiv;
 
 }
+
+
 
 
 
@@ -169,7 +165,6 @@ function createCities(idCountry) {
       let button = document.createElement("element");
       button.innerHTML = ` 
       <button class="readMoreButton">Läs Mer</button><br>
-      <img id="adSquare" src="Annonser/annons_kvadratisk.jpg" alt="annons" />
       `;
       cityContainer.append(button);
 
@@ -195,12 +190,28 @@ function createCities(idCountry) {
       grades2.classList.add('grades');
       extra2.append(grades2);
 
-      let extraImage2 = document.createElement('img');
-      extraImage2.classList.add('extraImage');
+      let extraImage2 = document.createElement('div');
+      extraImage2.innerHTML = `
+      <img class="extraImage" src = 'Images/${city.imagesNormal[1]}'> 
+      <img id="adSquare" src="Annonser/annons_kvadratisk.jpg" alt="annons" />
+      <button class="extraCloseButton">Stäng</button>
+      `;
       extra2.append(extraImage2);
 
+      let cityUnis2 = createUniversity2();
+      console.log(cityUnis2);
+
+
+      gradeImage2.append(grades2, extraImage2);
+
+
+      extra2.append(gradeImage2, cityUnis2);
+
+      
     }
 
+   
+    }
     /*UNIVERSITIES.forEach(function (uni) {
       if (uni.cityID === city.id) {
         let pElement = document.createElement("p");
@@ -209,7 +220,7 @@ function createCities(idCountry) {
         
       }
     })
-    */
+    
 
 
   })
