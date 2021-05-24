@@ -218,6 +218,7 @@ button:active {
   margin-left: 12vw;
   margin-right: 10vw;
   width: 30vw;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -251,6 +252,3 @@ input {
   font-size: 15px;
 }
 
-#adLong{
-  
-}

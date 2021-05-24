@@ -212,7 +212,7 @@ function createCities(idCountry) {
         if (uni.cityID === city.id) {
           let pElement = document.createElement("p");
           pElement.innerHTML = uni.name;
-          .append(pElement);
+          cityUnis2.append(pElement);
           
         }
       })
