@@ -11,7 +11,6 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
     }
   });
   document.querySelector("#destinationsCity").value = "";
-
   filterCities.forEach(function (city) {
     let list = document.querySelector("#listContainer");
     list.append(DOMcities(city.imagesNormal[0], city.imagesNormal[1], city.name, city.text, city.id));
@@ -20,12 +19,9 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
 
 
 
-
-
 function DOMcities(bild, bild2, name, text, id) {
   let container = document.createElement("div");
   container.classList.add("cities");
-
 
 
   container.innerHTML = `
@@ -60,7 +56,7 @@ function DOMcities(bild, bild2, name, text, id) {
   `;
 
   let cityUnis = createUniversity(id);
-  console.log(cityUnis);
+
 
 
   gradeImage.append(grades, extraImage);
@@ -71,7 +67,10 @@ function DOMcities(bild, bild2, name, text, id) {
 
   container.append(extra);
 
+
+
   return container;
+
 }
 
 function createUniversity(id) {
@@ -113,7 +112,6 @@ document.querySelector("#buttonCountry").addEventListener("click", function () {
     }
   });
   document.querySelector("#destinationsCountry").value = "";
-  console.log(filterCountries);
   filterCountries.forEach(function (country) {
     let list = document.querySelector("#listContainer");
     list.append(DOMcountries(country.imagesNormal[0], country.id));
@@ -143,7 +141,6 @@ function createCities(idCountry) {
 
 
   CITIES.forEach(function (city) {
-    console.log(idCountry);
     if (city.countryID === idCountry) {
 
 
@@ -204,7 +201,7 @@ function createCities(idCountry) {
       extra2.append(extraImage2);
 
       let cityUnis2 = createUniversity();
-      console.log(cityUnis2);
+
 
 
       gradeImage2.append(grades2, extraImage2);
@@ -237,3 +234,45 @@ function createCities(idCountry) {
 
 }
 
+// läs mer knapp
+// document.querySelector(".readMoreButton").addEventListener("click", function () {
+//   let readMore = document.querySelector(".extra");
+//   console.log(readMore);
+//   if (readMore.style.display == "none") {
+//     readMore.style.display = "block";
+//   } else {
+//     readMore.style.display = "none";
+//   }
+// })
+// //läs mer knapp
+// let divExtra = document.querySelector('.extra');
+// console.log(divExtra);
+// let readMore = document.querySelector(".readMoreButton");
+// console.log(readMore);
+// readMore.addEventListener('click', () => {
+//   if (extra.style.display === 'none') {
+//     extra.style.display = 'block';
+//   } else {
+//     extra.style.display = 'none';
+//   }
+// })
+
+
+
+
+ //läs mer knapp
+//  let divExtra = document.querySelector('.extra');
+//  console.log(divExtra);
+//  let readMore = document.querySelector(".readMoreButton");
+//  console.log(readMore);
+//  readMore.addEventListener('click', () => {
+//    if (extra.style.display === 'none') {
+//      extra.style.display = 'block';
+//    } else {
+//      extra.style.display = 'none';
+//    }
+//  })
+
+// Försöka räkna ut ett snitt 
+
+//läs mer knapp

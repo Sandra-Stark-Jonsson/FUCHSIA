@@ -182,17 +182,16 @@ button:active {
   width: 100vw;
   background-color: #b2bcab;
   display: flex;
- 
   padding-top: 10vh;
   
 }
 
 
 
-.readMoreButton:active  {
+/* .readMoreButton:active  {
    display: visible;
    
-}
+} */
 
 .gradeImage{
   width: 40vw;
