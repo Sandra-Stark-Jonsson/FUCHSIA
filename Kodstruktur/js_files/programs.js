@@ -59,16 +59,16 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
       })
     }
   });
-  
+
   //slupmässig nummer
   // function randomNumber(min, max) {
   //   return Math.floor(Math.random() * (max - min + 1)) + min;
   // }
 
   //slumpmässig kommentar
-  
 
-    container.innerHTML = `
+
+  container.innerHTML = `
   <div class="startdiv">
     <div class="programContainer">
       <div class="allInfo">
@@ -96,12 +96,12 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
     </div>
     <div class="students"></div> 
     </div>`
-    
-  
-        ;
 
-      return container;
 
-    }
-  
- 
+    ;
+
+  return container;
+
+}
+
+

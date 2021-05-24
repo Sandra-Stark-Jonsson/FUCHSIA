@@ -11,6 +11,7 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
     }
   });
   document.querySelector("#destinationsCity").value = "";
+
   filterCities.forEach(function (city) {
     let list = document.querySelector("#listContainer");
     list.append(DOMcities(city.imagesNormal[0], city.imagesNormal[1], city.name, city.text, city.id));
@@ -19,9 +20,12 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
 
 
 
+
+
 function DOMcities(bild, bild2, name, text, id) {
   let container = document.createElement("div");
   container.classList.add("cities");
+
 
 
   container.innerHTML = `
@@ -233,8 +237,3 @@ function createCities(idCountry) {
 
 }
 
-
-
-
-
-// Försöka räkna ut ett snitt 
