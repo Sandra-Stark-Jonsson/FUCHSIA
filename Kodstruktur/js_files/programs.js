@@ -69,7 +69,7 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
       CITIES.forEach(function (city) {
         if (city.id === findCountry) {
           getCountry = city.countryID;
-          COUNTRIES.forEach(function(country){
+          COUNTRIES.forEach(function (country) {
             if (country.id === getCountry) {
               land = country.name;
             }
@@ -79,12 +79,7 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
     }
   });
 
-  //slupmässig nummer
-  // function randomNumber(min, max) {
-  //   return Math.floor(Math.random() * (max - min + 1)) + min;
-  // }
 
-  //slumpmässig kommentar
 
 
   container.innerHTML = `
@@ -96,7 +91,7 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
         <div id="info">
           <p class="programP" id="skola">Skola: ${school}</p>
           <p class="programP"> Språk: ${talk}</p>
-          <p class="programP"> ${land} ${stad}</p>
+          <p class="programP"> Land och Stad: ${land}, ${stad}</p>
         </div>  
         <div id="studentReview"></div>
       </div>
