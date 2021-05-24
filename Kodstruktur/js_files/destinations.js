@@ -210,14 +210,16 @@ function createCities(idCountry) {
 
       UNIVERSITIES.forEach(function (uni) {
         if (uni.cityID === city.id) {
-          let pElement = document.createElement("p");
+          let pElement = document.createElement("h2");
           pElement.innerHTML = uni.name;
           cityUnis2.append(pElement);
-          
+
         }
+        
+
       })
-      
-      
+
+
     }
 
 
