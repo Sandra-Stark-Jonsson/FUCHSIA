@@ -1,6 +1,7 @@
 "use strict ";
 //sök på städer
 document.querySelector("#buttonCity").addEventListener("click", function () {
+  document.querySelector("#listContainer").innerHTML = "";
   let inputText = document.querySelector("#destinationsCity").value;
   inputText = inputText.toLowerCase();
   let filterCities = CITIES.filter(function (city) {
@@ -24,54 +25,83 @@ function DOMcities(bild, bild2, name, text, id) {
   container.classList.add("cities");
 
 
-  container.innerHTML = `
-  <div class="startDiv">
-  <div class= "cityContainer">
-      <h1 class="cityH1">${name}</h1>
-      <p class="cityP">${text}</p>
-      <element>
-      <button class="readMoreButton">Läs Mer</button>
-      <element>
-  </div>
-    <img class="startImage" src = 'Images/${bild}'>
-  </div>
-  <img id="adLong" src="Annonser/annons_horizontell.jpg" alt="annons" />
-  `;
+  let cityelement = document.createElement("div");
+  cityelement.classList.add("startDiv");
 
 
-  let extra = document.createElement('div')
-  extra.classList.add('extra');
+  let cityContainer = document.createElement("div");
 
-  let gradeImage = document.createElement('div');
-  gradeImage.classList.add('gradeImage');
+  cityContainer.classList.add("cityContainer");
+  cityContainer.setAttribute("id", name)
+  cityelement.append(cityContainer);
 
-  let grades = document.createElement('div');
-  grades.classList.add('grades');
+  let cityH1 = document.createElement("h1");
+  cityH1.classList.add("cityH1");
+  cityH1.innerHTML = name;
+  cityContainer.append(cityH1);
 
-  let extraImage = document.createElement('div');
-  extraImage.classList.add('extraImage');
-  extraImage.innerHTML = `
-  <img class="extraImage" src = 'Images/${bild2}'> 
-  <button class="extraCloseButton">Stäng</button>
-  `;
+  let cityP = document.createElement("p");
+  cityP.classList.add("cityP");
+  cityP.innerHTML = text;
+  cityContainer.append(cityP);
+
+  let cityBild = document.createElement("div");
+  cityBild.innerHTML = `
+      <img class="startImage" src = 'Images/${bild}'> `
+  cityelement.append(cityBild);
+
+  let button = document.createElement("element");
+  button.innerHTML = ` 
+      <button class="readMoreButton">Läs Mer</button><br>
+      `;
+  cityContainer.append(button);
+
+  container.append(cityelement);
 
   let cityUnis = createUniversity(id);
 
 
+  button.addEventListener('click', function (event) {
+    let extra = document.createElement('div')
+    extra.classList.add('extra');
 
-  gradeImage.append(grades, extraImage);
+    let gradeImage = document.createElement('div');
+    gradeImage.classList.add('gradeImage');
+
+    let grades = document.createElement('div');
+    grades.classList.add('grades');
+
+    let extraImage = document.createElement('div');
+    extraImage.classList.add('extraImage');
+    extraImage.innerHTML = `
+  <img class="extraImage" src = 'Images/${bild2}'> 
+  `;
+    let extraCloseButton = document.createElement("button");
+    extraCloseButton.className = "extraCloseButton";
+    extraCloseButton.textContent = "Stäng";
+    extraImage.append(extraCloseButton);
+    extraCloseButton.addEventListener("click", (event) => {
+      event.target.parentElement.parentElement.parentElement.parentElement.remove();
+
+    })
+
+    gradeImage.append(grades, extraImage);
 
 
-  extra.append(gradeImage, cityUnis);
+    extra.append(gradeImage, cityUnis);
+    event.target.parentElement.parentElement.parentElement.parentElement.append(extra)
+    console.log(event.target.parentElement.parentElement.parentElement.parentElement);
+  })
 
 
-  container.append(extra);
 
 
 
   return container;
 
 }
+
+
 
 function createUniversity(id) {
 
@@ -102,6 +132,7 @@ function createUniversity(id) {
 //sök på länder
 
 document.querySelector("#buttonCountry").addEventListener("click", function () {
+  document.querySelector("#listContainer").innerHTML = "";
   let inputText = document.querySelector("#destinationsCountry").value;
   inputText = inputText.toLowerCase();
   let filterCountries = COUNTRIES.filter(function (country) {
@@ -151,6 +182,7 @@ function createCities(idCountry) {
       let cityContainer = document.createElement("div");
 
       cityContainer.classList.add("cityContainer");
+      cityContainer.setAttribute("id", city.name)
       cityelement.append(cityContainer);
 
       let cityH1 = document.createElement("h1");
@@ -180,52 +212,64 @@ function createCities(idCountry) {
 
       parent.append(cityelement);
 
-      let extra2 = document.createElement('div')
-      extra2.classList.add('extra');
-      parent.append(extra2);
+      button.addEventListener('click', (event) => {
+        let extra2 = document.createElement('div')
+        extra2.classList.add('extra');
+        parent.append(extra2);
 
-      let gradeImage2 = document.createElement('div');
-      gradeImage2.classList.add('gradeImage');
-      extra2.append(gradeImage2);
+        let gradeImage2 = document.createElement('div');
+        gradeImage2.classList.add('gradeImage');
+        extra2.append(gradeImage2);
 
-      let grades2 = document.createElement('div');
-      grades2.classList.add('grades');
-      extra2.append(grades2);
+        let grades2 = document.createElement('div');
+        grades2.classList.add('grades');
+        extra2.append(grades2);
 
-      let extraImage2 = document.createElement('div');
-      extraImage2.innerHTML = `
+        let extraImage2 = document.createElement('div');
+        extraImage2.innerHTML = `
       <img class="extraImage" src = 'Images/${city.imagesNormal[1]}'> 
       <img id="adSquare" src="Annonser/annons_kvadratisk.jpg" alt="annons" />
-      <button class="extraCloseButton">Stäng</button>
+    
       `;
-      extra2.append(extraImage2);
+        let extraCloseButton = document.createElement("button");
+        extraCloseButton.className = "extraCloseButton";
+        extraCloseButton.textContent = "Stäng";
+        extraImage2.append(extraCloseButton);
+        extraCloseButton.addEventListener("click", (event) => {
+          event.target.parentElement.parentElement.parentElement.remove();
 
-      let cityUnis2 = createUniversity();
+        })
+        extra2.append(extraImage2);
 
-
-
-      gradeImage2.append(grades2, extraImage2);
-
-
-      extra2.append(gradeImage2, cityUnis2);
-
-      UNIVERSITIES.forEach(function (uni) {
-        if (uni.cityID === city.id) {
-          let pElement = document.createElement("h2");
-          pElement.innerHTML = uni.name;
-          cityUnis2.append(pElement);
-
-        }
+        let cityUnis2 = createUniversity();
 
 
+
+        gradeImage2.append(grades2, extraImage2);
+
+
+        extra2.append(gradeImage2, cityUnis2);
+
+        UNIVERSITIES.forEach(function (uni) {
+          if (uni.cityID === city.id) {
+            let pElement = document.createElement("h2");
+            pElement.innerHTML = uni.name;
+            cityUnis2.append(pElement);
+
+          }
+
+
+        })
+
+        event.target.parentElement.parentElement.parentElement.after(extra2);
       })
-
-
     }
-
-
-
   })
+
+
+
+
+
 
 
 
@@ -234,7 +278,7 @@ function createCities(idCountry) {
 
 }
 
-// läs mer knapp
+// // läs mer knapp
 // document.querySelector(".readMoreButton").addEventListener("click", function () {
 //   let readMore = document.querySelector(".extra");
 //   console.log(readMore);
@@ -244,7 +288,7 @@ function createCities(idCountry) {
 //     readMore.style.display = "none";
 //   }
 // })
-// //läs mer knapp
+// // //läs mer knapp
 // let divExtra = document.querySelector('.extra');
 // console.log(divExtra);
 // let readMore = document.querySelector(".readMoreButton");
@@ -255,24 +299,6 @@ function createCities(idCountry) {
 //   } else {
 //     extra.style.display = 'none';
 //   }
-// })
+// // })
 
 
-
-
- //läs mer knapp
-//  let divExtra = document.querySelector('.extra');
-//  console.log(divExtra);
-//  let readMore = document.querySelector(".readMoreButton");
-//  console.log(readMore);
-//  readMore.addEventListener('click', () => {
-//    if (extra.style.display === 'none') {
-//      extra.style.display = 'block';
-//    } else {
-//      extra.style.display = 'none';
-//    }
-//  })
-
-// Försöka räkna ut ett snitt 
-
-//läs mer knapp
