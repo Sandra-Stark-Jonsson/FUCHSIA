@@ -198,7 +198,7 @@ function createCities(idCountry) {
       `;
       extra2.append(extraImage2);
 
-      let cityUnis2 = createUniversity2();
+      let cityUnis2 = createUniversity();
       console.log(cityUnis2);
 
 
@@ -210,8 +210,6 @@ function createCities(idCountry) {
       
     }
 
-   
-    }
     /*UNIVERSITIES.forEach(function (uni) {
       if (uni.cityID === city.id) {
         let pElement = document.createElement("p");
@@ -220,7 +218,7 @@ function createCities(idCountry) {
         
       }
     })
-    
+    */
 
 
   })
