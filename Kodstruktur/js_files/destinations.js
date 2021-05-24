@@ -1,6 +1,7 @@
 "use strict ";
 //sök på städer
 document.querySelector("#buttonCity").addEventListener("click", function () {
+  //nollställer efter varje sökning
   document.querySelector("#listContainer").innerHTML = "";
   let inputText = document.querySelector("#destinationsCity").value;
   inputText = inputText.toLowerCase();
@@ -19,7 +20,7 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
 });
 
 
-
+//Skapa ny div med städer
 function DOMcities(bild, bild2, name, text, id) {
   let container = document.createElement("div");
   container.classList.add("cities");
@@ -60,7 +61,7 @@ function DOMcities(bild, bild2, name, text, id) {
 
   let cityUnis = createUniversity(id);
 
-
+  //läs mer knappen - skapa ny div
   button.addEventListener('click', function (event) {
     let extra = document.createElement('div')
     extra.classList.add('extra');
@@ -76,6 +77,7 @@ function DOMcities(bild, bild2, name, text, id) {
     extraImage.innerHTML = `
   <img class="extraImage" src = 'Images/${bild2}'> 
   `;
+    //stängknapp - tar bort extra diven
     let extraCloseButton = document.createElement("button");
     extraCloseButton.className = "extraCloseButton";
     extraCloseButton.textContent = "Stäng";
@@ -211,7 +213,7 @@ function createCities(idCountry) {
 
 
       parent.append(cityelement);
-
+      //skapa läs mer knapp och lägg till eventlister klick - skapa ny div
       button.addEventListener('click', (event) => {
         let extra2 = document.createElement('div')
         extra2.classList.add('extra');
@@ -231,6 +233,7 @@ function createCities(idCountry) {
       <img id="adSquare" src="Annonser/annons_kvadratisk.jpg" alt="annons" />
     
       `;
+        //skapa stängningsknapp och ta bort extra2 diven
         let extraCloseButton = document.createElement("button");
         extraCloseButton.className = "extraCloseButton";
         extraCloseButton.textContent = "Stäng";
@@ -277,28 +280,4 @@ function createCities(idCountry) {
 
 
 }
-
-// // läs mer knapp
-// document.querySelector(".readMoreButton").addEventListener("click", function () {
-//   let readMore = document.querySelector(".extra");
-//   console.log(readMore);
-//   if (readMore.style.display == "none") {
-//     readMore.style.display = "block";
-//   } else {
-//     readMore.style.display = "none";
-//   }
-// })
-// // //läs mer knapp
-// let divExtra = document.querySelector('.extra');
-// console.log(divExtra);
-// let readMore = document.querySelector(".readMoreButton");
-// console.log(readMore);
-// readMore.addEventListener('click', () => {
-//   if (extra.style.display === 'none') {
-//     extra.style.display = 'block';
-//   } else {
-//     extra.style.display = 'none';
-//   }
-// // })
-
 
