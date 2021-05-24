@@ -215,7 +215,7 @@ function createCities(idCountry) {
           cityUnis2.append(pElement);
 
         }
-        
+
 
       })
 
