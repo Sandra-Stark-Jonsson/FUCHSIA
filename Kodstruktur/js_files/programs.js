@@ -75,9 +75,9 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
         <h1 id="programH1">${name} - ${degree}</h1>
 
         <div id="info">
-          <p class="programP" id="skola">${school}</p>
-          <p class="programP">${talk}</p>
-          <p class="programP">${stad}</p>
+          <p class="programP" id="skola">Skola: ${school}</p>
+          <p class="programP"> Språk: ${talk}</p>
+          <p class="programP"> Stad: ${stad}</p>
         </div>  
         <div id="studentReview"></div>
       </div>
