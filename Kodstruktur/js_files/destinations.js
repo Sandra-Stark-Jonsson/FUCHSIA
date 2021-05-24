@@ -67,16 +67,6 @@ function DOMcities(bild, bild2, name, text, id) {
 
   container.append(extra);
 
-  document.querySelector(".readMoreButton").addEventListener("click", function () {
-    let readMore = document.querySelector(".extra");
-    console.log(readMore);
-    if (readMore.style.display == "none") {
-      readMore.style.display = "block";
-    } else {
-      readMore.style.display = "none";
-    }
-  })
-
 
 
   return container;
