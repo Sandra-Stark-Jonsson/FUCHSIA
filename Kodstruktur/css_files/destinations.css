@@ -13,7 +13,6 @@ body {
   height: 100vh;
   margin: 0;
   object-fit: cover;
-  z-index: -1;
 }
 
 #countainerDestination {
@@ -146,11 +145,7 @@ button:active {
 .citydDiv {
   width: 100vw;
   height: 70vh;
-  background-color: #949c8e;
-  
- 
-  
-  
+  background-color: #949c8e;  
 }
 
 .cityH1 {
@@ -182,16 +177,9 @@ button:active {
   width: 100vw;
   background-color: #b2bcab;
   display: flex;
-  padding-top: 10vh;
-  
+  padding-top: 10vh;  
 }
 
-
-
-/* .readMoreButton:active  {
-   display: visible;
-   
-} */
 
 .gradeImage{
   width: 40vw;
@@ -226,12 +214,6 @@ button:active {
   padding-left: 1vw;
   padding-right: 1vw;
 }
-
-input {
-  font-family: "Open Sans", sans-serif;
-  
-}
-
 #adSquare{
   height: 200px;
   width: 200px;
