@@ -18,6 +18,7 @@ document.querySelector("#buttonCity").addEventListener("click", function () {
 });
 
 
+
 function DOMcities(bild, bild2, name, text, id) {
   let container = document.createElement("div");
   container.classList.add("cities");
@@ -207,18 +208,18 @@ function createCities(idCountry) {
 
       extra2.append(gradeImage2, cityUnis2);
 
+      UNIVERSITIES.forEach(function (uni) {
+        if (uni.cityID === city.id) {
+          let pElement = document.createElement("p");
+          pElement.innerHTML = uni.name;
+          .append(pElement);
+          
+        }
+      })
+      
       
     }
 
-    /*UNIVERSITIES.forEach(function (uni) {
-      if (uni.cityID === city.id) {
-        let pElement = document.createElement("p");
-        pElement.innerHTML = uni.name;
-        cityelement.append(pElement);
-        
-      }
-    })
-    */
 
 
   })

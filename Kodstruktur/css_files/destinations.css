@@ -182,12 +182,14 @@ button:active {
   width: 100vw;
   background-color: #b2bcab;
   display: flex;
-  /*display: none;*/
+ 
   padding-top: 10vh;
   
 }
 
-.readMoreButton:active  /* body > div:nth-child(3) > div > div:last-child */{
+
+
+.readMoreButton:active  {
    display: visible;
    
 }
