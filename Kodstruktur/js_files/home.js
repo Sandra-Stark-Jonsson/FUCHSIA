@@ -29,9 +29,9 @@ function randomComment() {
       let newDiv = document.createElement("div");
       newDiv.classList.add("carousel-cell");
       newDiv.innerHTML = `
-    <h1>${newComment.alias}</h1>
-    <p>${newComment.text}</p>
-    `
+        <h1 class="studentName">${newComment.alias}</h1>
+        <p class="studentComment">${newComment.text}</p>
+      `
       studentBox.append(newDiv);
     }
 
@@ -42,8 +42,8 @@ function randomComment() {
       let newDiv = document.createElement("div");
       newDiv.classList.add("carousel-cell");
       newDiv.innerHTML = `
-      <h1>${newComment.alias}</h1>
-      <p>${newComment.text}</p>
+        <h1 class="studentName">${newComment.alias}</h1>
+        <p class="studentComment">${newComment.text}</p>
       `
       studentBox.append(newDiv);
     }

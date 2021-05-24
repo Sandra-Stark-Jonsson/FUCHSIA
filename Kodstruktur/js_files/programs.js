@@ -60,6 +60,25 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
     }
   });
 
+  let land;
+  let findCountry;
+  let getCountry;
+  UNIVERSITIES.forEach(function (skola) {
+    if (skola.id === universityID) {
+      findCountry = skola.cityID;
+      CITIES.forEach(function (city) {
+        if (city.id === findCountry) {
+          getCountry = city.countryID;
+          COUNTRIES.forEach(function(country){
+            if (country.id === getCountry) {
+              land = country.name;
+            }
+          });
+        }
+      });
+    }
+  });
+
   //slupmässig nummer
   // function randomNumber(min, max) {
   //   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -77,7 +96,7 @@ function DOMprograms(name, universityID, level, language, entryGrades) {
         <div id="info">
           <p class="programP" id="skola">Skola: ${school}</p>
           <p class="programP"> Språk: ${talk}</p>
-          <p class="programP"> Stad: ${stad}</p>
+          <p class="programP"> ${land} ${stad}</p>
         </div>  
         <div id="studentReview"></div>
       </div>

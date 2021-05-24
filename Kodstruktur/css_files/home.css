@@ -32,8 +32,6 @@ body {
   width: 100%;
   height: 70vh;
   background-color: #949c8e;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -58,8 +56,7 @@ body {
 p {
   font-size: 2vh;
   overflow: scroll;
-  max-height: 15vh;
-  max-width: 50vw;
+
 }
 
 #button {
@@ -94,6 +91,11 @@ p {
 
 img {
   object-fit: contain;
+}
+
+#adLong {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
 /* länk till destination och program sidorna */
@@ -184,13 +186,13 @@ nav > a {
 
 /* studentkommentarer */
 #homeStudents {
+  height: 60vh;
   box-sizing: border-box;
   width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin-top: 10vh;
   margin-left: 5vw;
   margin-right: 5vw;
 }
@@ -204,41 +206,44 @@ nav > a {
 }
 .carousel-cell {
   width: 66%;
-  height: 25vh;
+  height: 35vh;
   margin: 10px;
+  margin-top: 10vh;
   background: #949c8e;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
   align-items: center;
-  overflow: scroll;
- 
+  /*overflow: scroll;*/
 }
 
-.carousel-cell > h1{
-  position: absolute;
-  top: 109vh;
-  font-size: 27px;  
+.studentName {
+  margin: 0;
+  margin-top: 1vh;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  font-size: 4vh;  
   padding: 4px;
+  justify-content: flex-start;
   
 }
-.carousel-cell > p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    width: 100%;
-    margin-top: 4vh;
-   font-style: italic;
-    overflow-y: scroll;
-   margin-right: 10px;
-   margin-left: 10px;
+.studentComment {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-style: italic;
+  overflow-y: scroll;
 }
 
-#homeStudents > h1{
+#homeStudents > h1 {
   position: absolute;
   top: 97vh;
-  margin-bottom: 1vh;
+  margin: 0;
+  margin-top: 8vh;
+  margin-bottom: 5vh;
   font-size: 6vh;
   font-weight: bolder;
 }
