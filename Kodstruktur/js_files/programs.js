@@ -23,7 +23,7 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
 });
 
 
-// Skapa information till frogrammen
+// Skapa information till programmen
 function DOMprograms(name, universityID, level, language, entryGrades) {
   let container = document.createElement("div");
   container.classList.add("program");
