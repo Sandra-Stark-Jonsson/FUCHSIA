@@ -1,5 +1,6 @@
 "use strict"
 
+//Hitta programen när vi söker
 document.querySelector("#buttonProgram").addEventListener("click", function () {
   document.querySelector("#listContainer").innerHTML = "";
   let inputText = document.querySelector("#program").value;
@@ -22,7 +23,7 @@ document.querySelector("#buttonProgram").addEventListener("click", function () {
 });
 
 
-
+// Skapa information till frogrammen
 function DOMprograms(name, universityID, level, language, entryGrades) {
   let container = document.createElement("div");
   container.classList.add("program");
