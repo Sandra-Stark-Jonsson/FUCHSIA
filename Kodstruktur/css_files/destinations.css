@@ -105,8 +105,6 @@ button:active {
   background-color: #feca7d;
 }
 
-
-
 .startDiv {
   display: flex;
   align-items: center;
@@ -115,21 +113,16 @@ button:active {
   width: 100vw;
   background-color: #b2bcab;
   margin-top: 10vh;
- 
 }
 
 .startImage {
   height: 50vh;
   width: 45vw;
-  
   margin-right: 10vw;
-
 }
 
 .citieparent {
   width: 100vw;
- 
-  
 }
 
 .cityContainer {
@@ -140,7 +133,6 @@ button:active {
   flex-direction: column;
   align-items: flex-start;
 }
-
 
 .citydDiv {
   width: 100vw;
@@ -170,16 +162,13 @@ button:active {
   overflow: scroll;
 }
 
-
-
 .extra{
-  height: 130vh;
+  height: 105vh;
   width: 100vw;
   background-color: #b2bcab;
   display: flex;
   padding-top: 10vh;  
 }
-
 
 .gradeImage{
   width: 40vw;
@@ -187,41 +176,37 @@ button:active {
   margin-left: 10vw;
 }
 
-.grades{
-  background-color: white;
-  width: 40vw;
-  height: 20vh;
-  margin-bottom: 5vh;
-}
-
 .extraImage{
   height: 50vh;
   width: 45vw;
-  
-  
 }
 
-.universities{
+.universities {
   margin-left: 12vw;
   margin-right: 10vw;
   width: 30vw;
-  height: 75vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.5);
   margin-bottom: 15vh;
   padding-left: 1vw;
   padding-right: 1vw;
 }
-#adSquare{
+
+.universities > h2 {
+  font-size: 2.7vh;
+}
+
+#adSquare {
   height: 200px;
   width: 200px;
   position: absolute;
   margin-top: 45px;
 }
 
-.extraCloseButton{
+.extraCloseButton {
   margin-left: 35vw;
   margin-top: 40vh;
   height: 50px;
@@ -232,4 +217,3 @@ button:active {
   box-shadow: 3px 3px #97a8a7;
   font-size: 15px;
 }
-
