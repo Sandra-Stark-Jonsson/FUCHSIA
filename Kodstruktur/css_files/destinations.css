@@ -188,10 +188,7 @@ button:active {
 }
 
 .grades{
-  background-color: white;
-  width: 40vw;
-  height: 20vh;
-  margin-bottom: 5vh;
+  
 }
 
 .extraImage{
@@ -205,12 +202,13 @@ button:active {
   margin-left: 12vw;
   margin-right: 10vw;
   width: 30vw;
+  height: 40vh;
   height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
   padding-left: 1vw;
   padding-right: 1vw;
 }
