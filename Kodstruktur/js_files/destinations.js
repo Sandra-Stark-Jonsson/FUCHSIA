@@ -75,8 +75,8 @@ function DOMcities(bild, bild2, name, text, id) {
     let extraImage = document.createElement('div');
     extraImage.classList.add('extraImage');
     extraImage.innerHTML = `
-    <img class="extraImage" src = 'Images/${bild2}'> 
-    `;
+  <img class="extraImage" src = 'Images/${bild2}'> 
+  `;
     //stängknapp - tar bort extra diven
     let extraCloseButton = document.createElement("button");
     extraCloseButton.className = "extraCloseButton";
@@ -95,9 +95,15 @@ function DOMcities(bild, bild2, name, text, id) {
     console.log(event.target.parentElement.parentElement.parentElement.parentElement);
   })
 
+
+
+
+
   return container;
 
 }
+
+
 
 function createUniversity(id) {
 
@@ -120,6 +126,10 @@ function createUniversity(id) {
   return uniDiv;
 
 }
+
+
+
+
 
 //sök på länder
 
@@ -157,7 +167,7 @@ function DOMcountries(bild, countryID) {
 
 }
 
-// Här skapas alla informatin till när man söker på land
+
 function createCities(idCountry) {
   let parent = document.createElement("div");
   parent.classList.add("citieparent");
@@ -259,5 +269,15 @@ function createCities(idCountry) {
     }
   })
 
+
+
+
+
+
+
+
   return parent;
+
+
 }
+

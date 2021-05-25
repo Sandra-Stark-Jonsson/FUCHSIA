@@ -248,6 +248,15 @@ nav > a {
 
 /* buttons karusellen */
 
+#firstCell,
+#secondCell,
+#thirdCell {
+}
+#fourthCell,
+#fitfthCell,
+#sixthCell {
+}
+
 .button-prev,
 .button-next {
   height: 40px;
@@ -281,3 +290,5 @@ nav > a {
   cursor: pointer;
   border: 1px #212121;
 }
+
+
