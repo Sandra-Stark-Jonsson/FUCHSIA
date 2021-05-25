@@ -1,6 +1,7 @@
 "use strict"
 
 document.querySelector("#buttonProgram").addEventListener("click", function () {
+  document.querySelector("#listContainer").innerHTML = "";
   let inputText = document.querySelector("#program").value;
   inputText = inputText.toLowerCase();
   let filterPrograms = PROGRAMMES.filter(function (program) {
