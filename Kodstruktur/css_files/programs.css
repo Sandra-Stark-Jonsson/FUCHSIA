@@ -42,6 +42,7 @@ h2 {
   font-size: 5vh;
   margin-bottom: 10vh;
 }
+
 #searchPrograms {
   width: 100%;
   display: flex;
@@ -51,7 +52,6 @@ h2 {
 
 input {
   height: 20px;
-  
 }
 
 #logoSmall {
@@ -123,10 +123,6 @@ button:active {
   font-size: 2.5vh;
 }
 
-
-
-
-
 #grades {
   width: 30vw;
   height: 15vh;
@@ -142,8 +138,6 @@ button:active {
   align-items: center;
   justify-content: center;
 }
-
-
 
 input {
   font-family: "Open Sans", sans-serif;
